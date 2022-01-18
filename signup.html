@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ba14677647.js" crossorigin="anonymous">
+    </script>
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            width:60%;
+            border:1px solid red;
+            /* height:450px; */
+            margin:auto;
+        }
+        #container>#first{
+            margin-left: 50px;
+            border:1px solid blue;
+        }
+        #container>#second{
+            margin-left:50px;
+            border:1px solid blue
+
+        }
+        #header{
+            width:60%;
+            margin:auto;
+        }
+        h4{
+            background-color: rgb(243,239,234) ;
+            height:25px;
+            padding:10px;
+            border-top:1px solid black;
+            border-bottom:1px solid grey;
+
+        }
+        #email,#pass{
+            width:200px
+        }
+        h5{
+            margin-left: 10px;
+         }
+        a{
+            color:red
+        }
+        #checkbox{
+            display: flex;
+            line-height: 0px;
+            margin-left: 5px;
+        }
+        #checkbox>p{
+            margin-left:5px;
+            
+        }
+
+        input[type=submit]{
+            background-color:black;
+            color: white;
+            border: 0;
+            padding: 10px 20px;
+            width: 150px;
+        }
+        @media only screen and (min-width: 0px) and (max-width: 575px) {
+  #container {
+    flex-direction: column;
+  }
+}
+ 
+    </style>
+</head>
+<body>
+   <div id ="header">
+    <h2>MY ACCOUNT</h2>
+    <!-- <hr/>
+    <h4>LOG IN</h4>
+    <hr/> -->
+    <div><h4>LOG IN</h4></div>
+   </div>
+    <div id = "container">
+       
+        <div id = "first">
+            <h5>NEW CUSTOMERS</h5>
+            <hr/>
+            <form>
+               <p>*Required</p> 
+                <input id = "email" type="text" placeholder="*Email address">
+                <br/>
+                <p>*0</p>
+                <input id = "pass" type="password" placeholder="*Password">
+                <br/>
+               <div id = "checkbox">
+                <input type="checkbox">
+                <p>Show password</p>
+               </div>
+                 <input type="checkbox">
+                 <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and <a href="">Privacy Policy</a> </p>
+                 <div id ="checkbox">
+                    <input type="checkbox">
+                    <p>Yes! I would like to receive the Bobbi Brown Newsletter.</p>
+                    <i class="fas fa-info-circle"></i>
+                 </div>
+                 <br/>
+                 <a href="">Read the Privacy Policy</a>
+                 <br/>
+                 <input type="submit" value="CONTINUE">
+            </form>
+        </div>
+        <div id ="second">
+            <h5>SIGN IN</h5>
+            <hr/>
+            <form>
+                <p>*Required</p>
+                <input id = "email" type="text" placeholder="*Email address"> 
+                <br/>
+                <br/>
+                <input id = "pass" type="password" placeholder="*Password">
+                <br/>
+                <a href="">Forgot your password</a>
+                <br/>
+                 <input type="submit" value="CONTINUE">
+            </form>
+
+        </div>
+    </div>
+      
+</body>
+</html>
