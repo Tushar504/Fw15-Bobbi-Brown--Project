@@ -9,20 +9,17 @@
     <title>Document</title>
     <style>
         #container{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
             width:60%;
-            border:1px solid red;
-            /* height:450px; */
             margin:auto;
         }
         #container>#first{
-            margin-left: 50px;
-            border:1px solid blue;
+            margin-left: 10px;
+            
         }
         #container>#second{
             margin-left:50px;
-            border:1px solid blue
-
         }
         #header{
             width:60%;
@@ -43,7 +40,7 @@
             margin-left: 10px;
          }
         a{
-            color:red
+            color:red;
         }
         #checkbox{
             display: flex;
@@ -51,8 +48,7 @@
             margin-left: 5px;
         }
         #checkbox>p{
-            margin-left:5px;
-            
+            margin-left:5px;  
         }
 
         input[type=submit]{
@@ -61,6 +57,20 @@
             border: 0;
             padding: 10px 20px;
             width: 150px;
+            margin-top: 10px;
+        }
+        input[type=checkbox]{
+            margin-top: 10px;
+         
+
+        }
+        #submit{
+            margin-top:200px;
+        }
+        i{
+            margin-left: 10px;
+            height:0px;
+            width:10px
         }
         @media only screen and (min-width: 0px) and (max-width: 575px) {
   #container {
@@ -94,13 +104,16 @@
                 <input type="checkbox">
                 <p>Show password</p>
                </div>
-                 <input type="checkbox">
-                 <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and <a href="">Privacy Policy</a> </p>
+                <div id ="checkbox">
+                    <input type="checkbox">
+                    <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and </p>
+                </div>
+                <p><a href="">Privacy Policy</a></p>
                  <div id ="checkbox">
                     <input type="checkbox">
                     <p>Yes! I would like to receive the Bobbi Brown Newsletter.</p>
-                    <i class="fas fa-info-circle"></i>
                  </div>
+                 <i class="fas fa-info-circle"></i>
                  <br/>
                  <a href="">Read the Privacy Policy</a>
                  <br/>
@@ -119,7 +132,7 @@
                 <br/>
                 <a href="">Forgot your password</a>
                 <br/>
-                 <input type="submit" value="CONTINUE">
+                 <input id = "submit" type="submit" value="CONTINUE">
             </form>
 
         </div>
