@@ -83,9 +83,6 @@
 <body>
    <div id ="header">
     <h2>MY ACCOUNT</h2>
-    <!-- <hr/>
-    <h4>LOG IN</h4>
-    <hr/> -->
     <div><h4>LOG IN</h4></div>
    </div>
     <div id = "container">
@@ -106,9 +103,9 @@
                </div>
                 <div id ="checkbox">
                     <input type="checkbox">
-                    <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and </p>
+                    <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and <a href="">Privacy Policy</a></p>
                 </div>
-                <p><a href="">Privacy Policy</a></p>
+    
                  <div id ="checkbox">
                     <input type="checkbox">
                     <p>Yes! I would like to receive the Bobbi Brown Newsletter.</p>
@@ -125,10 +122,10 @@
             <hr/>
             <form>
                 <p>*Required</p>
-                <input id = "email" type="text" placeholder="*Email address"> 
+                <input id = "mail" type="text" placeholder="*Email address"> 
                 <br/>
                 <br/>
-                <input id = "pass" type="password" placeholder="*Password">
+                <input id = "pas" type="password" placeholder="*Password">
                 <br/>
                 <a href="">Forgot your password</a>
                 <br/>
@@ -140,3 +137,55 @@
       
 </body>
 </html>
+<script>
+
+    document.querySelector("form").addEventListener("submit" ,signup);
+     var newAct=JSON.parse(localStorage.getItem("customer"))||[];
+
+    function signup(event){
+        event.preventDefault();
+        var email = document.querySelector("#email").value;
+        var pass =  document.querySelector("#pass").value;
+
+        var userData = {
+            mail:email,
+            password:pass,
+        }
+        newAct.push(userData);
+        alert("sign is succesfully")
+        localStorage.setItem("customer",JSON.stringify(newAct));
+        
+        window.location.href ="signup.html";
+
+    }
+  
+    document.querySelector("#submit").addEventListener("submit",login);
+//  console.log(submit)
+// var regData = JSON.parse(localStorage.getItem("customer"));
+// console.log(regData);
+console.log(newAct)
+
+
+function login(event){
+    event.preventDefault();
+    var emai=document.querySelector("#mail").value;
+    var paswd=document.querySelector("#pas").value;
+
+    for(var i=0; i<newAct.length; i++){
+        console.log(newAct[i].mail,newAct[i].password);
+        if(newAct[i].mail== emai && newAct[i].password == paswd){
+            alert("login succes")
+              window.location.href ="home.html";
+           }
+           else{
+               alert("sign up first")
+               window.location.href = "signup.html"
+           }
+        
+    }
+}
+
+    
+    
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>SIGN IN</h5>
+    <hr/>
+    <form>
+        <p>*Required</p>
+        <input id = "mail" type="text" placeholder="*Email address"> 
+        <br/>
+        <br/>
+        <input id = "pas" type="password" placeholder="*Password">
+        <br/>
+        <a href="">Forgot your password</a>
+        <br/>
+         <input type="submit" value="CONTINUE">
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",login);
+//  console.log(submit)
+var regData = JSON.parse(localStorage.getItem("customer"));
+// console.log(regData);
+
+
+function login(event){
+    event.preventDefault();
+    var emai=document.querySelector("#mail").value;
+    var paswd=document.querySelector("#pas").value;
+
+    for(var i=0; i<regData.length; i++){
+        console.log(regData[i].mail,regData[i].password);
+        if(regData[i].mail== emai && regData[i].password == paswd){
+            alert("login succes")
+            //   window.location.href ="home.html";
+           }
+           else{
+               alert("sign up first")
+               window.location.href = "signup.html"
+           }
+        
+    }
+}
+</script>
