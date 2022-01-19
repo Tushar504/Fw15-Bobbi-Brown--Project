@@ -80,14 +80,15 @@
 <script>
     var data=JSON.parse(localStorage.getItem("facedata"))||[];
       mapping(data);
+      var data1=data;
     function mapping(data){
      document.querySelector("#container").innerHTML="";
     data.map(function(elem){
         var div=document.createElement("div");
-
+      
         var img=document.createElement("img");
         img.setAttribute("src",elem.image);
-
+       
         var h4=document.createElement("h4");
         h4.textContent=elem.name;
 
@@ -118,6 +119,8 @@ function filter(){
         document.querySelector("#top>img").setAttribute("src","top.png")
         document.querySelector(".totalproducts").textContent=`${data.length} products`
         mapping(data);
+        data1=data
+        document.querySelector("#sor").value="";
     }
     else{
     var res=data.filter(function(elem){
@@ -128,24 +131,32 @@ function filter(){
 if(selected=="Foundation"){
     document.querySelector("#top>img").setAttribute("src","foundation.png")
     mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
 }
 else if(selected=="Corrector & Concealer"){
     document.querySelector("#top>img").setAttribute("src","Corrector.png")
     mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
 }
 else if(selected=="Primer"){
     document.querySelector("#top>img").setAttribute("src","primer.png")
     mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
 }
 else if(selected=="Powder"){
     document.querySelector("#top>img").setAttribute("src","powder.png")
     mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
 }
 }
 }
 function sorted(){
     var selected=document.querySelector("#sor").value;
-    var res=data.sort(function(a,b){
+    var res=data1.sort(function(a,b){
         if(selected=="Low"){
             return a.price-b.price;
         }
@@ -155,4 +166,5 @@ function sorted(){
     })
     mapping(res);
 }
+
 </script>
