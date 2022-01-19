@@ -53,6 +53,15 @@
 
 </style>
 <body>
+
+  <select id="sortPrice" onchange="sortPrice()">
+    <option value="">SORT BY</option>
+    <option value="low">PRICE(LOW TO HIGH)</option>
+    <option value="high">PRICE(HIGH TO LOW)</option>
+
+
+
+  </select>
     <div id="container">
 
     </div>
@@ -310,6 +319,9 @@
 
     ]
 
+    
+    
+    
     userdata.map(function (elem) {
 
         var div= document.createElement("div");
