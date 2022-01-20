@@ -11,15 +11,20 @@
         #container{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            width:60%;
+            width:70%;
             margin:auto;
+            height: 400px;
         }
-        #container>#first{
+        #first{
             margin-left: 10px;
-            
+            width: 100%;
+            height: auto;
+            line-height: 0px;
         }
-        #container>#second{
+        #second{
             margin-left:50px;
+            height: auto;
+            width: 100%;
         }
         #header{
             width:60%;
@@ -29,23 +34,30 @@
             background-color: rgb(243,239,234) ;
             height:25px;
             padding:10px;
-            border-top:1px solid black;
             border-bottom:1px solid grey;
 
         }
         #email,#pass{
             width:200px
         }
+      
+
         h5{
             margin-left: 10px;
          }
         a{
             color:red;
+            width: auto;
+            display: inline;
+        }
+        p{
+            width: auto;
         }
         #checkbox{
             display: flex;
-            line-height: 0px;
             margin-left: 5px;
+            width: auto;
+            height: auto;
         }
         #checkbox>p{
             margin-left:5px;  
@@ -61,20 +73,31 @@
         }
         input[type=checkbox]{
             margin-top: 10px;
-         
-
         }
         #submit{
-            margin-top:200px;
+            margin-top:135px;
         }
         i{
             margin-left: 10px;
             height:0px;
             width:10px
         }
+        input{
+            /* line-height: 0px; */
+        }
+        .condition-div{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: auto;
+            
+        }
+        .last-div{
+            height: 30px;
+            margin-top: 20px;
+        }
         @media only screen and (min-width: 0px) and (max-width: 575px) {
   #container {
-    flex-direction: column;
+    grid-template-columns: column;
   }
 }
  
@@ -93,26 +116,31 @@
             <form>
                <p>*Required</p> 
                 <input id = "email" type="text" placeholder="*Email address">
-                <br/>
-                <p>*0</p>
+                <p>0</p>
                 <input id = "pass" type="password" placeholder="*Password">
-                <br/>
-               <div id = "checkbox">
-                <input type="checkbox">
-                <p>Show password</p>
-               </div>
-                <div id ="checkbox">
-                    <input type="checkbox">
-                    <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and <a href="">Privacy Policy</a></p>
+                <p id="para"></p>
+               <div>
+                <div class="condition-div">
+                    <div id = "checkbox">
+                        <input type="checkbox">
+                        <p>Show password</p>
+                    </div>
+                    <div id ="checkbox">
+                        <input type="checkbox">
+                        <p>*I agree to Bobbi Brown's <a href="">Terms and Conditons</a> and </p>
+                        <p><a href="">Privacy Policy</a></p>
+                    </div>
+                     <div id ="checkbox">
+                        <input type="checkbox">
+                        <p>Yes! I would like to receive the Bobbi Brown Newsletter.</p>
+                     </div>
+                    <i class="fas fa-info-circle"></i>
                 </div>
-    
-                 <div id ="checkbox">
-                    <input type="checkbox">
-                    <p>Yes! I would like to receive the Bobbi Brown Newsletter.</p>
-                 </div>
-                 <i class="fas fa-info-circle"></i>
-                 <br/>
-                 <a href="">Read the Privacy Policy</a>
+               
+                <div class="last-div">
+                    <a href="">Read the Privacy Policy</a>
+                </div>
+                </div>
                  <br/>
                  <input type="submit" value="CONTINUE">
             </form>
@@ -120,13 +148,15 @@
         <div id ="second">
             <h5>SIGN IN</h5>
             <hr/>
-            <form>
+            <form id = "form">
                 <p>*Required</p>
                 <input id = "mail" type="text" placeholder="*Email address"> 
                 <br/>
                 <br/>
                 <input id = "pas" type="password" placeholder="*Password">
                 <br/>
+                <p id="login-para"></p>
+            </br>
                 <a href="">Forgot your password</a>
                 <br/>
                  <input id = "submit" type="submit" value="CONTINUE">
@@ -137,55 +167,62 @@
       
 </body>
 </html>
+
+
 <script>
 
     document.querySelector("form").addEventListener("submit" ,signup);
      var newAct=JSON.parse(localStorage.getItem("customer"))||[];
-
+    //  console.log(newAct)
     function signup(event){
         event.preventDefault();
         var email = document.querySelector("#email").value;
         var pass =  document.querySelector("#pass").value;
+        var text = document.getElementById("para")
 
         var userData = {
             mail:email,
             password:pass,
         }
         newAct.push(userData);
-        alert("sign is succesfully")
-        localStorage.setItem("customer",JSON.stringify(newAct));
-        
-        window.location.href ="signup.html";
 
+        if(email.length != 0 && pass.length !=0){
+            alert("sign is succesfully")
+             localStorage.setItem("customer",JSON.stringify(newAct));
+             window.location.href ="signup.html";
+        }
+        else{
+            text.textContent = "Invalid Credentials"
+            text.style.color = "red"
+        }
     }
-  
-    document.querySelector("#submit").addEventListener("submit",login);
-//  console.log(submit)
-// var regData = JSON.parse(localStorage.getItem("customer"));
-// console.log(regData);
-console.log(newAct)
+
+    document.querySelector("#form").addEventListener("submit",logIn);
+    console.log(newAct);
 
 
-function login(event){
+ function logIn(event){
     event.preventDefault();
     var emai=document.querySelector("#mail").value;
     var paswd=document.querySelector("#pas").value;
-
-    for(var i=0; i<newAct.length; i++){
-        console.log(newAct[i].mail,newAct[i].password);
+    var text = document.getElementById("login-para")
+    console.log(newAct,"hello")
+    for(var i=0; i<newAct.length; i++){       
         if(newAct[i].mail== emai && newAct[i].password == paswd){
-            alert("login succes")
-              window.location.href ="home.html";
+            alert("login succes");
+              window.location.href ="face_page.html";
            }
+          else if(emai.length == 0 && paswd.length == 0){
+            event.preventDefault()
+            text.textContent = "Please Enter Valid Username/Password"
+            text.style.color = "red"
+        }
            else{
-               alert("sign up first")
-               window.location.href = "signup.html"
-           }
+               alert("sign up first");
+               window.location.href = "signup.html";
+         }
         
-    }
+    } 
 }
-
-    
-    
 
 </script>
