@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 60%;
+        height: auto;
+        background-image: url(https://www.bobbibrown.in/media/images/account/email-sms-signup-envelope.gif);
+        background-repeat: no-repeat;
+        align-items: center;
+        background-size: 95%;
+        position: fixed;
+        margin-left: 20%;
+        margin-top: 20px;
+        /* grid-template-columns:repeat(1,1fr) ; */
+      }
+      .heading {
+        /* width: 80%; */
+        text-align: center;
+        margin-top: 20px;
+        /* line-height: 25px;
+        height: auto;
+        margin-left: 60px;  */
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 100;
+        font-family: "BBText Regular", Helvetica, Arial, sans-serif;
+      }
+      h2 {
+        font-size: 24px;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        font-weight: 100;
+        font-family: "BBText Regular", Helvetica, Arial, sans-serif;
+      }
+      a {
+        color: red;
+        margin-left: 20px;
+      }
+      form {
+        width: 100%;
+        margin-left: 15px;
+        height: auto;
+        /* display: flex; */
+      }
+      form > input {
+        margin-left: 20px;
+        width: 250px;
+        height: 30px;
+        border: 1px solid black;
+      }
+      form > input:hover {
+        border-color: red;
+      }
+      #pin > input:hover,
+      #birth > input:hover {
+        border-color: red;
+      }
+
+      #birth {
+        margin-left: 40%;
+        width: 170px;
+        margin-top: 10px;
+        grid-area: birth;
+      }
+      #birth > p {
+        line-height: 0px;
+        margin-left: 50px;
+        margin-top: 40px;
+      }
+      #birth > input {
+        width: 40px;
+        height: 30px;
+      }
+      input {
+        width: 255px;
+        height: 30px;
+      }
+      #flex {
+        display: grid;
+        grid-template: "birth pin submit";
+      }
+      #pin {
+        grid-area: pin;
+        margin-top: 30px;
+        margin-left: 40px;
+      }
+      #signup > input {
+        grid-area: submit;
+        margin-right: 100px;
+        height: 30px;
+        width: 200px;
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+      }
+      @media only screen and (max-width: 768px) {
+        #flex {
+          grid-template:
+            "birth"
+            "pin"
+            "submit";
+        }
+        form > input {
+          width: 90%;
+          margin-top: 5px;
+        }
+        #birth {
+          /* margin-left: 50%; */
+          margin-top: 0px;
+        }
+        #birth > p {
+          margin-left: 60px;
+        }
+        #birth > input {
+          width: 40px;
+        }
+        #pin > input {
+          width: 96%;
+          margin-left: -10px;
+          margin-top: 2px;
+        }
+        #signup > input {
+          width: 90%;
+          margin-left: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="heading">
+        <h1><span>WANT A SNEAK PEEK?</span></h1>
+        <h2>
+          Sign up for Bobbi Brown emails and be the first to know about
+          exclusive offers,pre-sales, new collections and more
+        </h2>
+      </div>
+      <form>
+        <p>Required</p>
+        <input id="first" type="text" placeholder="First name*" />
+        <input id="last" type="text" placeholder="Last name*" />
+        <input id="email" type="text" placeholder="Email address*" />
+        <div id="flex">
+          <div id="birth">
+            <p>Your birthday</p>
+            <input id="mon" type="text" placeholder="month" />
+            <input id="date" type="number" placeholder="day" />
+            <input id="year" type="number" placeholder="year" />
+          </div>
+          <div id="pin">
+            <input id="pin" type="text" id="pin" placeholder="Pin code" />
+          </div>
+          <div id="signup">
+            <input id="submit" type="submit" value="SIGN UP NOW!" />
+          </div>
+        </div>
+
+        <p id="para"></p>
+      </form>
+      <a href="">Review our data privacy notice</a>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", sign);
+  var bobbiArr = JSON.parse(localStorage.getItem("bobbi")) || [];
+
+  function sign(event) {
+    event.preventDefault();
+    var first = document.querySelector("#first").value;
+    var last = document.querySelector("#last").value;
+    var email = document.querySelector("#email").value;
+    var month = document.querySelector("#mon").value;
+    var date = document.querySelector("#date").value;
+    var year = document.querySelector("#year").value;
+    var pincode = document.querySelector("#pin").value;
+    var text = document.getElementById("para");
+
+    var bobbiObj = {
+      first: first,
+      last: last,
+      email: email,
+      month: month,
+      date: date,
+      year: year,
+      pinnbr: pincode,
+    };
+
+    bobbiArr.push(bobbiObj);
+    // console.log(bobbiArr);
+    // localStorage.setItem("bobbi",JSON.stringify(bobbiArr))
+    // var text = document.getElementById("para")
+    if (
+      first.length != 0 &&
+      last.length != 0 &&
+      email.length != 0 &&
+      month.length != 0 &&
+      date.length != 0 &&
+      year.length != 0 
+     
+    ) 
+    {
+      alert("sign is succesfully");
+      localStorage.setItem("bobbi", JSON.stringify(bobbiArr));
+      window.location.href = "login.html";
+    } else {
+      text.textContent = "Invalid Credentials";
+      text.style.color = "red";
+    }
+  }
+</script>
