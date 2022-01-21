@@ -4,25 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/697099b486.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <style>
+
+
+
+/* #container1{
+  text-align: left;
+  
+}
+
+
+
+#container2{
+  text-align: right;
+} */
+
     #container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(11, 600px);
+        grid-template-rows: repeat(11, 700px);
         grid-gap: 20px; 
 
     }
 
-    /* #container > div{
-        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-    /* } */
+    #container > div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    #first{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    select{
+        padding: 10px;
+        margin: 5px 10px 10px 10px;
+    }
 
     
     div{
         text-align: center;
+    }
+
+    #container1{
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    #sortPrice{
+      
+     margin-left: 900px;
     }
    
 
@@ -35,9 +71,7 @@
         font-family: 'Roboto', sans-serif;
     }
     
-    /* div1{
-        text-align: center;
-    } */
+    
 
     .addcartclassic{
        width: 27%;
@@ -49,21 +83,71 @@
        
     }
 
+   
+
+    .topname{
+      color:  brown;
+      border: 1px solid brown ;
+      width: 30%;
+      margin: auto;
+    }
+
+    @media only screen and (min-width: 0px)  and (max-width: 320px)
+{
+#container{
+    grid-template-columns: repeat(1, 1fr) ;
+    grid-template-rows: repeat(30, 700px); ;
+}
+} 
+
+
+@media only screen and (min-width: 321px)  and (max-width: 720px)
+{
+    #container{
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(20, 700px);
+    }
+} 
+
 
 
 </style>
 <body>
 
+  <!-- <div id="first">
+    <p class="filte" style="margin: 10px;">Home</p>
+    <!-- <p style="margin: 10px;" class="totalproducts"></p> -->
+<!-- </div> --> -->
+
+
+
+<!-- <div id="container1">   -->
+  <select id="filterlist" onchange= "filterCart()">
+    <option value=""> FILTER BY </option>
+    <option value="moist"> Moisturizers </option>
+    <option value="serum">Serums & Treatment</option>
+    <option value="clean">Cleansers & Toner</option>
+    <option value="eye">Eye & Lip Care </option>
+  </select>
+<!-- </div> -->
+
+
+<!-- <div id="container2"> -->
   <select id="sortPrice" onchange="sortPrice()">
     <option value="">SORT BY</option>
     <option value="low">PRICE(LOW TO HIGH)</option>
     <option value="high">PRICE(HIGH TO LOW)</option>
-
-
-
+  
   </select>
-    <div id="container">
 
+  <!-- <div> -->
+ 
+
+
+  
+    <div id="container">
+ 
+      
     </div>
     
 </body>
@@ -75,86 +159,96 @@
     userdata = [ 
     {
       
-      
+      topname: "Top Rated",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E1LM01_600x600_0.jpg",
       name: "VITAMIN ENRICHED FACE BASE",
       subname: "Multitasking, moisturizing primer",
-      price: "$64.00"
+      price: 64.00,
+      cat: "moist",
     },
     {
       
-      
+      topname: "New",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EL1901_600x600_1.jpg",
       name: "VITAMIN ENRICHED EYE BASE",
       subname: "Undereye Moisturizer and Primer",
-      price: "$56.00",
+      price: 56.00,
+      cat: "moist",
     },
     {
       
-      
+      topname: "New",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EREP01_600x600_1.jpg",
       name: "EXTRA REPAIR MOISTURE CREAM INTENSE",
       subname: "Replenishing, peptide-infused cream",
-      price: "$105.00",
+      price: 105.00,
+      cat: "clean",
 
     },
     {
       
-      
+      topname: "New",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EP7P01_600x600_1.jpg",
       name: "EXTRA REPAIR EYE CREAM INTENSE",
       subname: "Revitalizing undereye treatment",
-      price: "$82.00",
+      price: 82.00,
+      cat: "eye",
     },
     {
       
-      
+      topname: "New",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EL1901_600x600_1.jpg",
       name: "EXTRA CLEANSING BALM",
       subname: "Purifying, conditioning cleanser",
-      price: "$56.00",
+      price: 56.00,
+      cat: "clean",
     },
     {
       
-      
+      topname: "Best Seller",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EPHC01_600x600_1.jpg",
       name: "EXTRA REPAIR EYE CREAM INTENSE REFILL",
       subname: "Skin loving. Planet conscious",
-      price: "$68.00 ",
+      price: 68.00 ,
+      cat: "eye",
     },
     {
       
-      
+      topname: "Best Rated",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ERER01_600x600_1.jpg",
       name: "EXTRA REPAIR MOISTURE CREAM INTENSE REFILL",
       subname: "Refill. Reuse. Repeat",
-      price: "$85.00",
+      price: 85.00,
+      cat: "clean",
     },
     {
       
-      
+      topname: "Best Rated",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E65X01_600x600_0.jpg",
       name: "HYDRATING FACE CREAM",
       subname: "Lightweight Face Moisturizer",
-      price: "$64.00",
+      price: 64.00,
+      cat: "clean",
 
     },
     {
       
-      
+      topname: "Customer Favourite",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E65Y01_600x600_0.jpg",
       name: "HYDRATING EYE CREAM",
       subname: "Gentle, quick-absorbing cream",
-      price: "$56.00",
+      price: 56.00,
+      cat: "eye",
     },
 
     {
       
-      
+      topname: "Best Rated",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EMNE01_600x600_1.jpg",
       name: "HYDRATING WATER FRESH CREAM",
       subname: "100 hours of non-stop hydration",
-      price: "$64.00"
+      price: 64.00,
+      cat: "clean",
     },
 
     {
@@ -163,15 +257,17 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ET7G01_600x600_1.jpg",
       name: "HYDRATING EYE CREAM",
       subname: "Gentle, quick-absorbing cream",
-      price: "$56.00"
+      price: 56.00,
+      cat: "eye",
     },
     {
       
-      
+      topname: "New",
       image: " https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E65Y01_600x600_0.jpg",
       name: "DELUXE SIZE REMEDIES SKIN CLARIFIER",
       subname: "Pore-clarifying booster",
-      price: "$74.00"
+      price: 74.00,
+      cat: "serum",
     },
 
     {
@@ -180,21 +276,25 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EHP201_600x600_1.jpg",
       name: "EXTRA ILLUMINATING MOISTURE BALM",
       subname: "Luminizing pearl moisturizer",
-      price: "$69.00"
+      price: 69.00,
+      cat: "moist",
     },
     { 
+      topname: "New",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E1YJ01_600x600_0.jpg",
       name: "EXTRA FACE OIL",
       subname: "Conditioning-blend face oil",
-      price: "$72.00",
+      price: 72.00,
+      cat: "serum",
     },
     {
       
-      
+      topname: "New",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EHP201_600x600_1.jpg",
       name: "EXTRA ILLUMINATING MOISTURE BALM",
       subname: "Luminizing pearl moisturizer",
-      price: "$69.00"
+      price: 69.00,
+      cat: "moist",
     },
     {
       
@@ -202,7 +302,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EER901_600x600_1.jpg",
       name: "EXTRA LIP TINT",
       subname: "Color-Enhancing Lip Balm",
-      price: "$34.00"
+      price: 34.00,
+      cat: "moist",
     },
     {
       
@@ -210,23 +311,26 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EM4201_600x600_0.jpg",
       name: "SOOTHING CLEANSING OIL",
       subname: "Makeup Remover and Face Cleanser",
-      price: "$50.00"
+      price: 50.00,
+      cat: "eye",
     },
     {
       
-      
+      topname: "New",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ETCT01_600x600_0.jpg",
       name: "SOOTHING CLEANSING OIL",
       subname: "Makeup Remover and Face Cleanser",
-      price: "$50.00"
+      price: 50.00,
+      cat: "eye",
     },
     {
       
-      
+      topname: "TRY IT ON",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E6M301_600x600_0.jpg",
       name: "SOOTHING CLEANSING OIL",
       subname: "Makeup Remover and Face Cleanser",
-      price: "$50.00"
+      price: 50.00,
+      cat: "eye",
     },
     {
       
@@ -234,7 +338,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E6M301_600x600_0.jpg",
       name: "EXTRA REPAIR SERUM",
       subname: "Firming and moisturizing formula",
-      price: "$119.00"
+      price: 119.00,
+      cat: "serum",
     },
     {
       
@@ -242,7 +347,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EFX201_600x600_1.jpg",
       name: "SKIN CLARIFIER NO. 75",
       subname: "Pore-Minimizing Face Serum",
-      price: "$49.00"
+      price: 49.00,
+      cat: "serum",
     },
     {
       
@@ -250,7 +356,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EG7801_600x600_1.jpg",
       name: "SKIN MOISTURE SOLUTION NO. 86 - INTENSE REHYDRATION COMPOUND",
       subname: "Water-infused hydrating serum",
-      price: "$49.00"
+      price: 49.00,
+      cat: "serum",
     },
     {
       
@@ -258,7 +365,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E6M301_600x600_0.jpg",
       name: "EXTRA REPAIR SERUM",
       subname: "Firming and moisturizing formula",
-      price: "$119.00"
+      price: 119.00,
+      cat: "serum",
     },
     {
       
@@ -266,7 +374,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E65R01_600x600_0.jpg",
       name: "HYDRATING FACE TONIC",
       subname: "Balancing and restoring toner",
-      price: "$38.00"
+      price: 38.00,
+      cat: "clean",
     },
     {
       
@@ -274,7 +383,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EPGP01_600x600_1.jpg",
       name: "MINI SOOTHING CLEANSING OIL",
       subname: "On-the-go gentle makeup-dissolving oil",
-      price: "$15.00",
+      price: 15.00,
+      cat: "eye",
     },
     {
       
@@ -282,7 +392,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EPGN01_600x600_1.jpg",
       name: "MINI VITAMIN ENRICHED FACE BASE",
       subname: "Oil-free moisturizer and primer",
-      price: "$20.00"
+      price: 20.00,
+      cat: "moist",
     },
     {
       
@@ -290,7 +401,8 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EKLT01_600x600_0.jpg",
       name: "PRIMER PLUS PROTECTION SPF 50",
       subname: "Protective face primer",
-      price: "$40.00",
+      price: 40.00,
+      cat: "clean",
     },
     {
       
@@ -298,15 +410,17 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EPGN01_600x600_1.jpg",
       name: "MINI VITAMIN ENRICHED FACE BASE",
       subname: "Oil-free moisturizer and primer",
-      price: "$20.00"
+      price: 20.00,
+      cat: "moist",
     },
     {
       
-      
+      topname: "Best Seller",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E42G01_600x600_0.jpg",
       name: "INSTANT LONG-WEAR MAKEUP REMOVER",
       subname: "Extra-gentle eye makeup remover",
-      price: "$33.00"
+      price: 33.00,
+      cat: "eye",
     },
     {
       
@@ -314,22 +428,68 @@
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ELN701_600x600_0.jpg",
       name: "DELUXE SIZE VITAMIN ENRICHED FACE BASE",
       subname: "Bestselling priming moisturizer",
-      price: "$95.00"
+      price: 95.00,
+      cat: "moist",
     }
 
     ]
 
     
+    display(userdata);
+   
     
+
+      
     
+function sortPrice(){
+  var selected= document.querySelector("#sortPrice").value;
+
+  if (selected == "low") {
+      userdata.sort(function (a, b) {
+        return a.price - b.price;
+      });
+    }
+    if (selected == "high") {
+      userdata.sort(function (a, b) {
+        return b.price - a.price;
+      });
+    }
+    document.querySelector("#container").innerHTML="";
+    display(userdata);
+}
+
+function filterCart() {
+    var selected = document.querySelector("#filterlist").value;
+    var filteredList = userdata.filter(function (elem) {
+      return elem.cat == selected;
+    });
+
+    // console.log(filteredList);
+   
+    display(filteredList);
+  } 
+
+
+
+function display(userdata){
+  document.querySelector("#container").innerHTML="";
     userdata.map(function (elem) {
+
+
 
         var div= document.createElement("div");
 
+        var topname= document.createElement("p");
+        topname.textContent= elem.topname;
+        topname.setAttribute("class", "topname")
+
+      
 
         var image = document.createElement("img");
     image.setAttribute("src", elem.image);
     image.setAttribute("class", "imageclassic")
+
+
 
     var name= document.createElement("h3");
     name.textContent= elem.name;
@@ -340,8 +500,27 @@
 
     subname.setAttribute("class", "subnameclassic")
 
+
+    
+    var div1 = document.createElement("div");
+
+    var symbol= document.createElement("i")
+    symbol.setAttribute("class", "fas fa-star")
+
+    var symbol1= document.createElement("i")
+    symbol1.setAttribute("class", "fas fa-star")
+
+    var symbol2= document.createElement("i")
+    symbol2.setAttribute("class", "fas fa-star")
+
+    var symbol3= document.createElement("i")
+    symbol3.setAttribute("class", "fas fa-star-half-alt")
+    
+
+    div1.append(symbol, symbol1, symbol2, symbol3)
+
     var price= document.createElement("p");
-    price.textContent= elem.price; 
+    price.textContent= `$${elem.price}`
     price.setAttribute("class", "priceclassic")
 
     // var div1= document.createElement("div");
@@ -353,11 +532,13 @@
     // div1.append(addcart)
 
 
-    div.append(image, name, subname, price, addcart);
+    div.append(topname, image, name, subname, div1, price, addcart);
 
     document.querySelector("#container").append(div);
 
 
 
     })
+  }
 </script>
+
