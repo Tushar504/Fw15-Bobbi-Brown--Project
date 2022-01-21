@@ -22,7 +22,7 @@
             <div class="head">
                <div id="one">PRODUCT</div>
                <div id="two">PRICE</div>
-               <div id="delete"><i class="fas fa-trash-alt"></i></div>
+             
             </div>
             <div id="container">
 
@@ -61,8 +61,13 @@
     mapping(dataforcart);
     subtotal(dataforcart)
     document.querySelector("#bag").textContent=`SHOPPING BAG  (${dataforcart.length})`
-   function mapping(dataforcart){
-    
+  
+    if(dataforcart.length==0){
+       document.querySelector(".head").innerHTML="";
+    }
+  
+  
+    function mapping(dataforcart){
     dataforcart.map(function(elem,index){
      
         var divmain=document.createElement("div");
@@ -87,9 +92,10 @@
     div2.setAttribute("id","sec")
     div2.textContent=`$ ${elem.price}.00`
      
-    var div3=document.createElement("button");
-    div3.textContent="remove";
+    var div3=document.createElement("span");
+    div3.textContent="";
     div3.setAttribute("id","butt");
+    div3.setAttribute("class","fas fa-trash-alt")
     div3.addEventListener("click",function(){
         removefromcart(index);
     })
@@ -110,17 +116,24 @@
    mapping(dataforcart)
    document.querySelector("#bag").textContent=`SHOPPING BAG  (${dataforcart.length})`
    subtotal(dataforcart)
+   if(dataforcart.length==0){
+       document.querySelector(".head").innerHTML="";
+    }
    }
 
 //    function for subtotal
 
-   function subtotal(dataforcart){
+function subtotal(dataforcart){
  var res=dataforcart.reduce(function(sum,elem){
      return sum+elem.price;
  },0)
+ 
+ 
  if(res>65){
  document.querySelector("#pricepush").textContent=`$ ${res}`;
  document.querySelector("#ship").textContent=`FREE`;
+ document.querySelector("#ship").style.color="purple";
+ document.querySelector("#ship").style.fontWeight="bold"
  document.querySelector("#total").textContent=`$ ${res}`;
  }
  else{
@@ -135,6 +148,7 @@
    }
    document.querySelector("#total").textContent=`$ ${res+select}`;
  }
+
 }
 
 
@@ -151,6 +165,8 @@ function discount(){
  if(res>65){
  document.querySelector("#pricepush").textContent=`$ ${res-((res*20)/100)}`;
  document.querySelector("#ship").textContent=`FREE`;
+ document.querySelector("#ship").style.color="purple";
+ document.querySelector("#ship").style.fontWeight="bold"
  document.querySelector("#total").textContent=`$ ${res-((res*20)/100)}`;
  }
  else{
@@ -164,7 +180,11 @@ function discount(){
     var select=0
    }
    document.querySelector("#total").textContent=`$ ${(res-((res*20)/100))+select}`;
- }
+
+}
+ alert("masai20 offer code applied")
+ 
+ document.querySelector("input").value="";
 }
 }
 </script>

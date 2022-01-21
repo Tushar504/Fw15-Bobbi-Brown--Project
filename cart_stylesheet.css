@@ -58,7 +58,7 @@ border-bottom: 2px solid rgb(199, 175, 175);
 
 width: 25%;
 text-align: center;
-margin-left: 20px;
+margin-left: 10px;
 }
 #one{
 width: 50%;
@@ -80,12 +80,15 @@ width: 50%;
 #sec{
 width: 25%;
 text-align: center;
-margin-left: 20px;
+margin-left: 25px;
 }
 #butt{
-width: 22%;
+width: 25%;
 height: 30px;
+text-align: center;
+font-size: 15px;
 }
+
 p{
 font-size: 12px;
 margin-left: 10px;
@@ -150,6 +153,21 @@ padding: 10px;
 h6{
 margin-left: 10px;
 }
-#delete{
-margin-left: 55px;
+
+@media only screen and (min-width:320px) and (max-width:720px){
+    #outside{
+        width: 70% ;
+        margin: auto;
+       display:block;
+        
+    }
+    #inside1{
+        width:100%;
+        margin-right: 20px;
+    }
+    #inside2{
+        width:100%;
+        margin-right: 20px;
+        
+    }
 }
