@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/697099b486.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<style>
+
+    #container1{
+        width:100%;
+        height: 100px;
+        /* border: 1px solid black; */
+        background-color: black;
+        margin-bottom: 20px;
+        
+    }
+
+    #name{
+        margin-top: 30px;
+        margin-left: 550px;
+      
+
+    }
+
+    #container{
+/* border: 1px solid black; */
+height: 450px;
+width: 800px;
+
+margin: auto;
+
+    }
+
+    .container5{
+        /* border: 1px solid black; */
+height: 100px;
+width: 800px;
+
+margin: auto;
+    }
+
+
+
+    #box1{
+/* border: 1px solid red; */
+height: 15%;
+font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    text-indent: 20px;
+
+    }
+
+
+    #box2{
+        /* border: 1px solid yellow; */
+        height: 75%;
+        width: 45%;
+    }
+
+    #box3{
+        /* border: 1px solid blue; */
+        height: 75%;
+        width: 45%;
+        margin-left: 25px;
+    }
+
+    #box4{
+        display: flex; 
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #p1, #p2{
+        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-indent: 0;
+    margin: 4px 0 30px 0;
+    padding-bottom: 17px;
+    border-bottom: 1.5px solid #000000;
+   
+    }
+
+    
+
+
+    .button1{
+        height: 12%;
+        width: 50%;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        margin-top: 70px;
+        margin-left: 10px
+
+    }
+
+    .button2{
+        height: 12%;
+        width: 30%;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 10px
+    }
+
+    input{
+        width: 95%;
+        height: 42px;
+        margin-top: 15px;
+        padding-left: 15px; 
+        
+    }
+
+    .checkout {
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    #password{
+        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-indent: 0;
+    margin: 9px 0 30px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000000;
+
+    
+    }
+
+    .line{
+        
+        border-bottom: 2px solid black;
+    }
+    
+
+</style>
+
+<body>
+    <div id= "container1">
+        
+       <img id = "name" src="https://m.bobbibrowncosmetics.com/media/export/cms/logo.png" width= 300 alt=""> 
+    </div>
+
+    <div id="container">
+        <div id="box1"> 
+            
+            <div class="checkout">  CHECKOUT   </div>
+             </div>
+
+        <div id=box4 > 
+            
+            
+        <div id="box2">
+<p id= "p1"> NEW CUSTOMER / GUEST</p>
+<hr>
+
+<input id="email" type="text" placeholder= "Email Address">
+
+<p>  
+    <i class="fas fa-external-link-square-alt"></i> Yes! I would like to receive the Bobbi Brown Email Newsletter.
+</p>
+
+
+
+
+<button class= "button1"> CHECKOUT AS GUEST </button>
+        </div>
+
+
+
+        <div id="box3">
+            <p id="p2">  SIGN IN</p>
+
+            <hr>
+            <input id= "email1" type="text" placeholder= "Email Address">
+
+            <input id="password1" type="text" placeholder= "Password">
+
+            <p id="password"> FORGOT YOUR PASSWORD?</p>
+
+            <button class= "button2"> SIGN IN </button>
+
+
+
+
+        </div>
+
+        
+    </div>
+
+    
+
+    </div>
+
+    <div class="container5">
+
+        <p>By clicking “Continue with Facebook”, I agree to Bobbi Brown’s Terms and Conditions and Privacy Policy.</p>
+        <p> <i class="far fa-square"></i> Yes! I would like to receive the Bobbi Brown Email Newsletter.</p>
+        <div>
+
+            <div class="line">  </div>
+    
+</body>
+
+
+
+
+</html>
+
+<script>
+
+
+    document.querySelector(".button1").addEventListener("click", finale)
+
+
+    function finale(){
+        
+
+        var a= document.querySelector("#email").value
+        
+   
+
+        if(a=="mohaktripathi029@gmail.com")
+        {
+            window.location.href="otp.html"
+        }
+        else{
+            alert("invalid email address");
+        }
+
+
+
+    }
+
+    document.querySelector(".button2").addEventListener("click", finaletouch)
+
+
+    function finaletouch(){
+        
+
+        var b= document.querySelector("#email1").value
+        var c= document.querySelector("#password1").value
+        
+   
+
+        if(b=="mohaktripathi029@gmail.com" && c=="mohak")
+        {
+            window.location.href="otp.html"
+        }
+        else{
+            alert("invalid email address and password");
+        }
+
+
+
+    }
+
+
+</script>

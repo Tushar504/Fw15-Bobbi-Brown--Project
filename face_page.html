@@ -78,10 +78,11 @@
 </body>
 </html>
 <script>
-    var data=JSON.parse(localStorage.getItem("facedata"))||[];
+    var data= JSON.parse(localStorage.getItem("facedata"))||[];
       mapping(data);
     function mapping(data){
      document.querySelector("#container").innerHTML="";
+     
     data.map(function(elem){
         var div=document.createElement("div");
 

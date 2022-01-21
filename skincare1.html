@@ -253,7 +253,7 @@
 
     {
       
-      
+      topname: "",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ET7G01_600x600_1.jpg",
       name: "HYDRATING EYE CREAM",
       subname: "Gentle, quick-absorbing cream",
@@ -272,7 +272,7 @@
 
     {
       
-      
+      topname: "",
       image: "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EHP201_600x600_1.jpg",
       name: "EXTRA ILLUMINATING MOISTURE BALM",
       subname: "Luminizing pearl moisturizer",
@@ -434,6 +434,8 @@
 
     ]
 
+
+    cartArr= JSON.parse(localStorage.getItem("CartItems")) || [];
     
     display(userdata);
    
@@ -483,6 +485,8 @@ function display(userdata){
         topname.textContent= elem.topname;
         topname.setAttribute("class", "topname")
 
+
+
       
 
         var image = document.createElement("img");
@@ -528,17 +532,34 @@ function display(userdata){
     var addcart= document.createElement("button");
     addcart.textContent= "ADD TO BAG";
     addcart.setAttribute("class", "addcartclassic")
+    addcart.addEventListener("click", addTocart) 
+      
+    
 
     // div1.append(addcart)
+      if(topname.textContent != "")
+{
+        div.append(topname, image, name, subname, div1, price, addcart);
+      }
+      else{
+        div.append(image, name, subname, div1, price, addcart);
+      }
 
-
-    div.append(topname, image, name, subname, div1, price, addcart);
+   
 
     document.querySelector("#container").append(div);
 
 
 
     })
+
+    function addTocart(elem){
+console.log(elem);
+cartArr.push(elem);
+localStorage.setItem("CartItems", JSON.stringify(cartArr));
+alert("added to cart successfully")
+}
+
   }
 </script>
 
