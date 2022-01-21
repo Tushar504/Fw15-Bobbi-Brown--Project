@@ -6,48 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link rel="stylesheet" href="face_stylesheet.css">
 </head>
-<style>
-    #top{
-        width: 100%;
-       
-    }
-    #container{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 20px;
-        padding: 10px;
-    }
-    img{
-        width:100%;
-    }
-    #container>div{
-        align-items: center;
-        text-align: center;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    }
-    button{
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        border: 0px;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-    #first{
-        display: flex;
-        justify-content: space-between;
-        
-    }
-    #second{
-      display: flex;
-      justify-content: space-between;
-    }
-    select{
-        padding: 10px;
-        margin: 5px 10px 10px 10px;
-    }
-</style>
+
+  
 <body>
     <div id="top">
    <img src="top.png"/>
@@ -78,10 +40,16 @@
 </body>
 </html>
 <script>
-    var data=JSON.parse(localStorage.getItem("facedata"))||[];
+     var data=JSON.parse(localStorage.getItem("facedata"))||[];
       mapping(data);
       var data1=data;
-    function mapping(data){
+
+    //   storing cart items
+      var cartarr=JSON.parse(localStorage.getItem("cartdata"))||[]; 
+   
+     
+    //  map function
+      function mapping(data){
      document.querySelector("#container").innerHTML="";
     data.map(function(elem){
         var div=document.createElement("div");
@@ -99,10 +67,10 @@
         h.textContent=elem.specification;
 
         var h3=document.createElement("p");
-        h3.textContent=`$ ${elem.price}`
+        h3.textContent=`$ ${elem.price}.00`
 
         var button=document.createElement("button");
-        button.textContent="Add To Cart"
+        button.textContent="ADD TO BAG"
         button.addEventListener("click",function(){
             addtocart(elem);
         })
@@ -111,8 +79,12 @@
         document.querySelector("#container").append(div)
     })
 }
+
+// display product count
 document.querySelector(".totalproducts").textContent=`${data.length} products`
 
+
+// filter function
 function filter(){
     var selected=document.querySelector("#filt").value;
     if(selected=="All"){
@@ -154,6 +126,8 @@ else if(selected=="Powder"){
 }
 }
 }
+
+// sort Function
 function sorted(){
     var selected=document.querySelector("#sor").value;
     var res=data1.sort(function(a,b){
@@ -167,4 +141,11 @@ function sorted(){
     mapping(res);
 }
 
+// function for add item to cart
+function addtocart(elem){
+    
+    cartarr.push(elem);
+    console.log(cartarr)
+    localStorage.setItem("cartdata",JSON.stringify(cartarr))
+}
 </script>
