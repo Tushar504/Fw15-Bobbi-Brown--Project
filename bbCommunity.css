@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+
+}
+
+#bbc{
+    width: 100%;
+    margin: auto;
+    /* margin-top: 20px; */
+}
+
+#bbc .top{
+    width: 100%;
+    padding: ;
+    padding: 15px 50px;
+    box-sizing: border-box;
+}
+
+#bbc .top p:nth-child(1){
+    font-size: 45px;
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
+
+#bbc .top p:nth-child(2){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(63, 62, 62);
+}
+
+#bbc .picslide{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(14,1fr);
+    grid-template-rows: 400px;
+    grid-template-areas: 
+    "a b c d"
+    ;
+    grid-gap: 10px;
+    overflow: scroll;
+    padding: 0px 40px;
+    
+    
+}
+
+#bbc .picslide:nth-child(1){
+    grid-area: a;
+}
+#bbc .picslide:nth-child(2){
+    grid-area: b;
+}
+#bbc .picslide:nth-child(3){
+    grid-area: c;
+}
+#bbc .picslide:nth-child(4){
+    grid-area: d;
+}
+
+#bbc .picslide .onlypic img{
+    width: 315px;
+    height: 315px;
+}

@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+}
+#lftp{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    
+}
+
+#lftp .top{
+    width: 100%;
+    margin: auto;
+    font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    padding: 0px 40px 20px 40px;
+    box-sizing: border-box;
+}
+#lftp .top p:nth-child(1){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: rgb(63, 62, 62);
+    width: 88%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#lftp .top p:nth-child(2){
+    line-height: .95;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+#lftp .top p:nth-child(3){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: rgb(63, 62, 62);
+    line-height: 1.4;
+}
+
+
+
+#lftp .btm{
+    width: 100%;
+    display: flex;
+    /* border: black 1px solid; */
+    flex-direction: row;
+    overflow: scroll;
+    padding: 0px 30px;
+}
+
+#lftp .lftpcard{
+    width: 33%;
+    height: auto;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
+    padding: 0px 10px;
+}
+
+#lftp .lftpcard img{
+    width:340px;
+    height: 220px;
+    padding: 10px 0px;
+}
+
+#lftp .btm .lftpcard p:nth-child(3){
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-size:20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#lftp .btm .lftpcard p:nth-child(2){
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-size:12px;
+    /* margin-top: 20px; */
+    color: #3e3f3f;
+}
+#lftp .btm .lftpcard p:nth-child(4){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size:15px;
+    color: #3e3f3f;
+    margin-bottom: 10px;
+}
+.bookbtn{
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    font-size: 12px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB Community</title>
+    <link rel="stylesheet" href="bbCommunity.css">
+</head>
+<body>
+    <div id="bbc">
+        <div class="top">
+            <p>#BOBBIBROWN COMMUNITY</p>
+            <p>Looking fresh-faced? Let's see it. Mention @bobbibrown and tag #BobbiBrown to share.</p>
+        </div>
+
+        <div class="picslide">
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    var bbCommunity= [
+    {
+        bg: "https://z3photorankmedia-a.akamaihd.net/media/x/m/x/xmxbiv4/mobile.jpg",
+        tag: "@BOBBIBROWNAUSTRALIA"
+    },
+    {
+        bg: "https://z1photorankmedia-a.akamaihd.net/media/t/t/k/ttkqsq4/mobile.jpg",
+        tag: "@RANTSMUA"
+    },
+    {
+        bg: "https://z2photorankmedia-a.akamaihd.net/media/2/q/e/2qef9q4/mobile.jpg",
+        tag: "@BB_JP_SAKUTA"
+    },
+    {
+        bg: "https://z2photorankmedia-a.akamaihd.net/media/m/a/s/masg5a4/mobile.jpg",
+        tag: "@BBPRO_AIMEEMORRISON"
+    },
+    {
+        bg: "https://z2photorankmedia-a.akamaihd.net/media/6/w/p/6wp3mq4/mobile.jpg",
+        tag: "@BBPRO_JP_SAKI"
+    },
+    {
+        bg: "https://z2photorankmedia-a.akamaihd.net/media/s/a/9/sa9kj94/mobile.jpg",
+        tag: "@BAEDYXO"
+    },
+    {
+        bg: "https://photorankmedia-a.akamaihd.net/media/2/9/h/29hmam4/mobile.jpg",
+        tag: "@NIKKIDEROEST"
+    },
+    {
+        bg: "https://z2photorankmedia-a.akamaihd.net/media/6/x/u/6xumap4/mobile.jpg",
+        tag: "@BBAKROPOLERIGA"
+    },
+    {
+        bg: "https://z1photorankmedia-a.akamaihd.net/media/9/m/3/9m39xq4/mobile.jpg",
+        tag: "@BOBBIBROWNKOREA"
+    },
+    {
+        bg: "https://z3photorankmedia-a.akamaihd.net/media/6/7/3/67336k4/mobile.jpg",
+        tag: "@BBPRO_WARRENDOWDALL"
+    },
+    {
+        bg: "https://photorankmedia-a.akamaihd.net/media/j/3/o/j3onnq4/mobile.jpg",
+        tag: "@BOBBIBROWNTURKIYE"
+    },
+    {
+        bg: "https://z3photorankmedia-a.akamaihd.net/media/9/x/8/9x8p5y4/mobile.jpg",
+        tag: "@ITSME_TESS02"
+    },
+    {
+        bg: "https://z3photorankmedia-a.akamaihd.net/media/j/4/g/j4ghnt4/mobile.jpg",
+        tag: "@AGNESTAN10061997"
+    }
+]
+
+    bbCommunity.map(function(dataset){
+        var div1= document.createElement("div");
+        div1.setAttribute("class","onlyPic");
+
+        var bgpic= document.createElement("img");
+        bgpic.setAttribute("src",dataset.bg);
+        // div1.style.background=dataset.bg;
+
+
+        var tags= document.createElement("p");
+        tags.textContent=dataset.tag;
+        // console.log(tags)
+
+        div1.append(tags, bgpic);
+        document.querySelector(".picslide").append(div1);
+    });
+
+
+</script>
