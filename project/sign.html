@@ -155,7 +155,7 @@
             <input id="year" type="number" placeholder="year" />
           </div>
           <div id="pin">
-            <input id="pin" type="text" id="pin" placeholder="Pin code" />
+            <input id="pin" type="number" id="pin" placeholder="Pin code" />
           </div>
           <div id="signup">
             <input id="submit" type="submit" value="SIGN UP NOW!" />
@@ -170,9 +170,13 @@
 </html>
 
 <script>
+  // we catch the first "form" and add evnet listener with function
   document.querySelector("form").addEventListener("submit", sign);
+  
+  // we store the all the data in array from localstorage
   var bobbiArr = JSON.parse(localStorage.getItem("bobbi")) || [];
 
+  // we catch the all value with respective i.d 
   function sign(event) {
     event.preventDefault();
     var first = document.querySelector("#first").value;
@@ -184,6 +188,9 @@
     var pincode = document.querySelector("#pin").value;
     var text = document.getElementById("para");
 
+
+    // we take one obj store the data in object type
+
     var bobbiObj = {
       first: first,
       last: last,
@@ -191,20 +198,22 @@
       month: month,
       date: date,
       year: year,
-      pinnbr: pincode,
+      pincode: pincode,
     };
-
+     
+    // we push obj to array
+    
     bobbiArr.push(bobbiObj);
-    // console.log(bobbiArr);
-    // localStorage.setItem("bobbi",JSON.stringify(bobbiArr))
-    // var text = document.getElementById("para")
+   
     if (
       first.length != 0 &&
       last.length != 0 &&
       email.length != 0 &&
       month.length != 0 &&
       date.length != 0 &&
-      year.length != 0 
+      year.length != 0 &&
+      pincode != 0
+      
      
     ) 
     {
