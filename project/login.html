@@ -164,8 +164,12 @@
 
 
 <script>
+    // we catch the first "form" and add evnet listener with function
 
     document.querySelector("form").addEventListener("submit" ,signup);
+
+    // we store the all the data in array from localstorage
+
      var newAct=JSON.parse(localStorage.getItem("customer"))||[];
     //  console.log(newAct)
     function signup(event){
@@ -183,7 +187,7 @@
         if(email.length != 0 && pass.length !=0){
             alert("sign is succesfully")
              localStorage.setItem("customer",JSON.stringify(newAct));
-             window.location.href ="signup.html";
+             window.location.href ="login.html";
         }
         else{
             text.textContent = "Invalid Credentials"
@@ -200,11 +204,12 @@
     var emai=document.querySelector("#mail").value;
     var paswd=document.querySelector("#pas").value;
     var text = document.getElementById("login-para")
-    console.log(newAct,"hello")
+    console.log(newAct)
     for(var i=0; i<newAct.length; i++){       
         if(newAct[i].mail== emai && newAct[i].password == paswd){
             alert("login succes");
-              window.location.href ="sign.html";
+            // we add the location here home.html
+              window.location.href ="Fw15-Bobbi-Brown--Project/face_page.html";
            }
           else if(emai.length == 0 && paswd.length == 0){
             event.preventDefault()

@@ -202,9 +202,12 @@
     };
      
     // we push obj to array
-    
+
     bobbiArr.push(bobbiObj);
    
+    // we check the conditon if input type length is no equl to zero then going to success signup.
+    // after complete the signup directly move login page 
+
     if (
       first.length != 0 &&
       last.length != 0 &&
@@ -220,7 +223,10 @@
       alert("sign is succesfully");
       localStorage.setItem("bobbi", JSON.stringify(bobbiArr));
       window.location.href = "login.html";
-    } else {
+    }
+    
+    // input length is zero then show the else condtion
+    else {
       text.textContent = "Invalid Credentials";
       text.style.color = "red";
     }
