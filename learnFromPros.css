@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+}
+#lftp{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    
+}
+
+#lftp .top{
+    width: 95%;
+    margin: auto;
+    font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#lftp .top p:nth-child(1){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: rgb(63, 62, 62);
+    width: 88%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#lftp .top p:nth-child(2){
+    line-height: .95;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+#lftp .top p:nth-child(3){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: rgb(63, 62, 62);
+    width: 30%;
+    margin: auto;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+#lftp .sescbtn{
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+}
+
+
+
+
+#lftp .btm{
+    width: 90%;
+    margin: auto 30px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: 
+    "a b c" ;
+    grid-gap: 10px;
+    padding-top: 20px;
+    overflow: hidden;
+    overflow-x: auto;
+    
+}
+
+#lftp .extracare:nth-child(1){
+    grid-area: a;
+    padding: 0px 4px;
+    
+}
+#lftp .extracare:nth-child(2){
+    grid-area: b;
+    padding: 0px 4px;
+    
+}
+#lftp .extracare:nth-child(3){
+    grid-area: c;
+    padding: 0px 4px;
+    
+}
+
+#lftp img{
+    width:320px;
+    height: 220px;
+}
+
+#lftp .btm .extracare p:nth-child(3){
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-size:18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#lftp .btm .extracare p:nth-child(2){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size:10px;
+    margin-top: 20px;
+    color: #3e3f3f;
+}
+#lftp .btm .extracare p:nth-child(4){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    color: #3e3f3f;
+    margin-bottom: 10px;
+}
+.bookbtn{
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    font-size: 12px;
+}

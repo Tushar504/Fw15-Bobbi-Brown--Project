@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://kit.fontawesome.com/f49c08b0ef.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		
+	.sideBr{
+		position: fixed;
+		background-color: black;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 120;
+		display: flex;
+		/*justify-content: center;*/
+		/*align-items: center;*/
+		/*flex-wrap: wrap;*/
+		overflow: scroll;
+		flex-direction: column;
+	}
+	.sideBr .sidData{
+		position: relative;
+		height: auto;
+		width: 100%;
+		padding: 0px 0;
+		margin: 10px 0;
+	}
+	.sideBr .sidData .text{
+		position: relative;
+		height: 80px;
+		width: 90%;
+		font-size: 50px;
+		padding: 20px 50px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: black;
+		color: white;
+		border: 1px solid white;
+	}
+	.sideBr .sidData .mainDetails{
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		background: black;
+	}
+	.sideBr .sidData.active .mainDetails{
+		visibility: visible;
+		height: auto;
+	}
+	.sideBr .sidData .details{
+		position: relative;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 50px 0;
+		background: white;
+	}
+	.sideBr .sidData .details .sideImg{
+		position: relative;
+		height: 100px;
+		width: 200px;
+		/*background: blue;*/
+	}
+	.sideBr .sidData .details .sideImg img{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+	.sideBr .sidData .details .deText{
+		/*background-color: orange;*/
+		width: 700px;
+	}
+	.sideBr .sidData .details .sideIcon{
+		position: relative;
+		width: 50px;
+		height: 100%;
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 40px;
+	}
+	</style>
+</head>
+<body>
+
+<div class="sideBr">
+		<div class="sidData" id="sidData1">
+			<div class="text" onclick="show1();">
+				<h2>New</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_customizeskincareroutine.jpg">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+		<div class="sidData" id="sidData2">
+			<div class="text" onclick="show2();">
+				<h2>New</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_customizeskincareroutine.jpg">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+		<div class="sidData" id="sidData3">
+			<div class="text" onclick="show3();">
+				<h2>New</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_customizeskincareroutine.jpg">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+		<div class="sidData" id="sidData4">
+			<div class="text" onclick="show4();">
+				<h2>New</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_customizeskincareroutine.jpg">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+					<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>Lorem</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+</div>
+</body>
+
+<script type="text/javascript">
+	function show1(){
+		var sidData = document.getElementById('sidData1');
+		sidData.classList.toggle("active"); 
+	}
+	function show2(){
+		var sidData = document.getElementById('sidData2');
+		sidData.classList.toggle("active"); 
+	}
+	function show3(){
+		var sidData = document.getElementById('sidData3');
+		sidData.classList.toggle("active"); 
+	}
+	function show4(){
+		var sidData = document.getElementById('sidData4');
+		sidData.classList.toggle("active"); 
+	}
+</script>
+</html>

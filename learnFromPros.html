@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn From The Pros</title>
+    <link rel="stylesheet" href="learnFromPros.css">
+</head>
+<body>
+    <div id="lftp">
+        <div class="top">
+        </div>
+
+        <div class="btm">
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    var learnFromThePros= [
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_customizeskincareroutine.jpg",
+        time: "30 MIN",
+        names:"CUSTOMIZE YOUR SKINCARE ROUTINE",
+        details:"Learn how to address your top skin concerns with a personalized routine curated by an artist."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_VirtualServices_LandingPage_Group_Tile2_1_@2x.gif",
+        time: "15 MIN",
+        names:"LOOK LESS TIRED",
+        details:"Learn how to neutralize under eye circles and look instantly more awake and bright-eyed using a few easy essentials."
+    },
+    {
+        images:"	https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_lookfreshvideocalls.jpg",
+        time: "30 MIN",
+        names:"LOOK FRESH FOR VIDEO CALLS",
+        details:"Learn how to look bright eyed and fresh faced in minutes with our pro tips."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_masteryourbrows.jpg",
+        time: "30 MIN",
+        names:"MASTER YOUR BROWS",
+        details:"Learn how to feel, define, and enhance your natural shape for an effortlessly polished look."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_PC_NA_Virtual_Consultations_Consultation_Tile_Weekend_Glow_1_@2x.jpg",
+        time: "30 MIN",
+        names:"EASY GLOWING",
+        details:"In this session, you'll learn how to how to effortlessly boost skin's radiance with a few glow essentials."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_effortlesseyes.jpg",
+        time: "30 MIN",
+        names:"EFFORTLESSLY EYES",
+        details:"Learn how to choose the right shades, finishes and techniques to enhance your eye shape and skin tone using Long-Wear Cream Shadow Sticks."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_fiveminutemakeup.jpg",
+        time: "30 MIN",
+        names:"5-MINUTE MAKEUP",
+        details:"Learn how to get ready in no time using five essentials and a personalized game plan by one of our artists."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_findyourfoundation.jpg",
+        time: "30 MIN",
+        names:"FIND YOUR FOUNDATION",
+        details:"Discover your feel-good coverage, weightless formula, and ideal finish in the complementary artist consultation."
+    },
+    {
+        images:"https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/SS21_makeupyourway.jpg",
+        time: "15 MIN",
+        names:"MAKEUP YOUR WAY",
+        details:"In this customizable session, an artist will help you create your best look from boosting your glow to mastering your brows to amplifying eyes."
+    }
+];
+
+learnFromThePros.map(function(dataset){
+    var btmdiv= document.createElement("div");
+    btmdiv.setAttribute("class","extracare");
+    var pic= document.createElement("img");
+    pic.setAttribute("src",dataset.images);
+    var t= document.createElement("p");
+    t.textContent= dataset.time;
+    var title= document.createElement("p");
+    title.textContent= dataset.names;
+    var comnt= document.createElement("p");
+    comnt.textContent=dataset.details;
+    var btn= document.createElement("button");
+    btn.setAttribute("class","bookbtn");
+    btn.textContent='BOOK NOW';
+    btmdiv.append(pic, t, title, comnt, btn);
+    document.querySelector(".btm").append(btmdiv);
+})
+
+</script>

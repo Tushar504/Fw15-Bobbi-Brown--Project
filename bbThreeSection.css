@@ -1,0 +1,552 @@
+/*---------------------Make it Monochromatic--------------------*/
+*{
+    margin: 0;
+    
+}
+#mim{
+    background-color: #f1c3c1;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    padding: 45px 0px;
+    
+}
+.left{
+    width: 50%;
+}
+
+.title{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 140px 90px;
+    margin-bottom: 40px;
+}
+.title p:nth-child(1){
+    font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+    font-size: 40px;
+    letter-spacing: normal;
+    text-size-adjust: 100%;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    /* transform: scale(1,2); */
+    
+    
+}
+.title p:nth-child(2){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    line-height: 19px;
+    font-size: 14px;
+    width: 70%;
+}
+.watch{
+    margin-left: 90px;
+    background-color: black;
+    color: white;
+    border: 0;
+    height: 30px;
+    font-weight: bold;
+}
+.shopnow{
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+    border: 0;
+    height: 30px;
+    font-weight: bold;
+}
+
+
+
+
+.right{
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 55px;
+}
+.right img{
+    height: 430px;
+    
+    
+}
+
+
+/* -------------------------------ALL IN ON SKIN--------------------------- */
+
+#aos{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+#aos .top{
+    width: 100%;
+    margin: auto;
+    font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    padding: 5px 25px 15px 25px;
+    box-sizing: border-box;
+}
+#aos .top p:nth-child(1){
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    
+}
+#aos .top p:nth-child(2){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: rgb(63, 62, 62);
+    width: 75%;
+    margin: auto;
+    
+}
+#aos .shopbut{
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#aos .btm{
+    width: auto;
+    padding: 0px 50px;
+}
+#aos .btm img{
+    width: 100%;
+    height: auto;
+    /* margin-right: 0px; */
+    padding-bottom: 10px;
+}
+
+
+/* -------------------------------NEW YEAR EXTRA CARE--------------------------- */
+
+
+#nyec{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    
+}
+
+#nyec .top{
+    width: 100%;
+    margin: auto;
+    font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 20px 15px 20px;
+}
+#nyec .top p:nth-child(1){
+    line-height: .95;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+#nyec .top p:nth-child(2){
+    font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: rgb(63, 62, 62);
+    width: 88%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#nyec .sescbtn{
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+}
+
+/* #nyec .btm{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px 50px 0px 50px;
+} */
+
+#nyec .btm{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a b c d" ;
+    box-sizing: border-box;
+    padding: 20px 50px 0px 50px;
+}
+
+#nyec .extracare:nth-child(1){
+    grid-area: a;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    
+}
+#nyec .extracare:nth-child(2){
+    grid-area: b;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    
+}
+#nyec .extracare:nth-child(3){
+    grid-area: c;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    
+}
+#nyec .extracare:nth-child(4){
+    grid-area: d;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    
+}
+
+#nyec img{
+    width:225px;
+    height: 220px;
+}
+
+#nyec .btm .extracare p:nth-child(2){
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    margin-top: 20px;
+    
+}
+#nyec .btm .extracare p:nth-child(3){
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    margin-top: 20px;
+    color: #3e3f3f;
+}
+#nyec .btm .extracare p:nth-child(4){
+    font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    color: #3e3f3f;
+    margin-bottom: 10px;
+}
+.shopbtn{
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    font-size: 12px;
+}
+
+
+
+/* ---------------------------MEDIA QUERY--------------------------- */
+
+@media (max-width:768px) {
+    #mim{
+        background-color: #f1c3c1;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+        padding: 45px 0px;
+        
+    }
+    #mim .left{
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    #mim .title{
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    #mim .title p:nth-child(1){
+        font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        letter-spacing: normal;
+        text-size-adjust: 100%;
+        line-height: 1;
+        letter-spacing: 1px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        /* transform: scale(1,2); */
+        
+        
+    }
+    #mim .title p:nth-child(2){
+        font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+        line-height: 1;
+        font-size: 14px;
+        width: 100%;
+    }
+    #mim .watch{
+        background-color: black;
+        color: white;
+        border: 0;
+        height: 30px;
+        font-weight: bold;
+        margin-left: 0;
+        width: 100px;
+    }
+    #mim .shopnow{
+        margin-left: 5px;
+        background-color: black;
+        color: white;
+        border: 0;
+        height: 30px;
+        font-weight: bold;
+        width: 100px;
+    }
+    
+    
+    
+    
+    #mim .right{
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-left: 0;
+    }
+    #mim .right img{
+        width: 610px;
+        height: 430px;
+        margin: auto;
+        display: block;
+        
+    }
+    
+    /* -------------------------------ALL IN ON SKIN--------------------------- */
+
+    #aos{
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 40px;
+    }
+
+    #aos .top{
+        width: 100%;
+        margin: auto;
+        font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+        text-align: center;
+        padding: 5px 25px 20px 25px;
+        box-sizing: border-box;
+    }
+    #aos .top p:nth-child(1){
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    #aos .top p:nth-child(2){
+        font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+        font-size: 15px;
+        color: rgb(63, 62, 62);
+        width: 85%;
+        margin: auto;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        
+    }
+    #aos .shopbut{
+        border: 0;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    #aos .btm{
+        width: auto;
+        padding: 0px;
+    }
+    #aos .btm img{
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+        
+    }
+
+
+    /* -------------------------------NEW YEAR EXTRA CARE--------------------------- */
+
+
+    #nyec{
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 40px;
+        
+    }
+    
+    #nyec .top{
+        width: 100%;
+        margin: auto;
+        font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 10px 20px 15px 20px;
+    }
+    #nyec .top p:nth-child(1){
+        line-height: .95;
+        letter-spacing: 1.5px;
+        font-size: 40px;
+        margin-bottom: 10px;
+        
+    }
+    #nyec .top p:nth-child(2){
+        font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        color: rgb(63, 62, 62);
+        width: 88%;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+    #nyec .sescbtn{
+        border: 0;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+    }
+    
+    
+    #nyec .btm{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "a b c d" ;
+        box-sizing: border-box;
+       padding: 30px 0px;
+    }
+    
+    #nyec .extracare:nth-child(1){
+        grid-area: a;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        
+    }
+    #nyec .extracare:nth-child(2){
+        grid-area: b;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        
+    }
+    #nyec .extracare:nth-child(3){
+        grid-area: c;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        
+    }
+    #nyec .extracare:nth-child(4){
+        grid-area: d;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        
+    }
+    
+    #nyec img{
+        width:145px;
+        height: 145px;
+    }
+    
+    #nyec .btm .extracare p:nth-child(2){
+        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+        font-size:14px;
+        font-weight: bold;
+        margin-top: 20px;
+        
+    }
+    #nyec .btm .extracare p:nth-child(3){
+        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+        font-size:15px;
+        margin-top: 20px;
+        color: #3e3f3f;
+    }
+    #nyec .btm .extracare p:nth-child(4){
+        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+        font-size:14px;
+        color: #3e3f3f;
+        margin-bottom: 10px;
+    }
+    #nyec .shopbtn{
+        border: 0;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------for small screen--------------------------------- */
+
+@media (max-width:425px) {
+    #mim .right{
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-left: 0;
+    }
+    #mim .right img{
+        width: 310px;
+        height: 290px;
+        margin: auto;
+        display: block;
+        
+    }
+    #mim .title p:nth-child(2){
+        font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+        line-height: 1.5;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #nyec img{
+        width:80px;
+        height: 80px;
+    }
+    #nyec .top p:nth-child(2){
+        font-family: "BBText Regular",Helvetica,Arial,sans-serif;
+        font-size: 15px;
+        color: rgb(63, 62, 62);
+        width: 88%;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+    #nyec .btm .extracare p:nth-child(4){
+        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
+        font-size:14px;
+        color: #3e3f3f;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    #nyec .shopbtn{
+        border: 0;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        height: 50px;
+        width: 70px;
+        font-size: 12px;
+    }
+}

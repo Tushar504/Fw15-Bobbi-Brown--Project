@@ -1,0 +1,68 @@
+   
+.slider_main{
+    display: flex;
+    justify-content: center;
+    /*border: 2px solid green;*/
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.lftpcard{
+    /*border: 2px solid red;*/
+    width: 100%;
+    margin: 10px;
+    margin-top: 1px;
+}
+.lftpcard img{
+    width: 100%;
+    height: 200px;
+}
+.p1{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        font-family: "BBText Bold", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: rgb(62, 63, 63);
+}
+.p2{
+    font-family: "BBText Bold", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.p3{
+    font-family: "BBText Regular", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(62, 63, 63);
+    margin-bottom: 10px;
+}
+
+.bookbtn{
+        background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    font-size: 12px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    cursor: pointer;
+}
+
+.bookbtn:hover{
+    background-color: grey;
+
+}
+
+@media screen and (max-width: 900px){
+
+    .lftpcard_hide{
+        display: none;
+    }
+}
