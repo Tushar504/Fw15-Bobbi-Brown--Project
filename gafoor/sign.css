@@ -1,0 +1,123 @@
+#container {
+    width: 60%;
+    height: auto;
+    background-image: url(https://www.bobbibrown.in/media/images/account/email-sms-signup-envelope.gif);
+    background-repeat: no-repeat;
+    align-items: center;
+    background-size: 95%;
+    margin-left: 20%;
+  
+    
+  }
+  .heading {
+    
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "BBText Regular", Helvetica, Arial, sans-serif;
+  }
+  h2 {
+    font-size: 24px;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    font-weight: 100;
+    font-family: "BBText Regular", Helvetica, Arial, sans-serif;
+  }
+  a {
+    color: red;
+    margin-left: 20px;
+  }
+  form {
+    width: 100%;
+    margin-left: 15px;
+    height: auto;
+    /* display: flex; */
+  }
+  form > input {
+    margin-left: 20px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid black;
+  }
+  form > input:hover {
+    border-color: red;
+  }
+  #pin > input:hover,
+  #birth > input:hover {
+    border-color: red;
+  }
+
+  #birth {
+    margin-left: 40%;
+    width: 170px;
+    margin-top: 10px;
+    grid-area: birth;
+  }
+  #birth > p {
+    line-height: 0px;
+    margin-left: 50px;
+    margin-top: 40px;
+  }
+  #birth > input {
+    width: 40px;
+    height: 30px;
+  }
+  input {
+    width: 255px;
+    height: 30px;
+  }
+  #flex {
+    display: grid;
+    grid-template: "birth pin submit";
+  }
+  #pin {
+    grid-area: pin;
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+  #signup > input {
+    grid-area: submit;
+    margin-right: 100px;
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+  }
+  @media only screen and (max-width: 768px) {
+    #flex {
+      grid-template:
+        "birth"
+        "pin"
+        "submit";
+    }
+    form > input {
+      width: 90%;
+      margin-top: 5px;
+    }
+    #birth {
+      /* margin-left: 50%; */
+      margin-top: 0px;
+    }
+    #birth > p {
+      margin-left: 60px;
+    }
+    #birth > input {
+      width: 40px;
+    }
+    #pin > input {
+      width: 96%;
+      margin-left: -10px;
+      margin-top: 2px;
+    }
+    #signup > input {
+      width: 90%;
+      margin-left: 25px;
+    }
+  }
