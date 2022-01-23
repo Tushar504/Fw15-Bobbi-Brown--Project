@@ -11,10 +11,9 @@
 <style>
 
     #container1{
-        width:100%;
+        width: 100%;
         height: 100px;
-        /* border: 1px solid black; */
-        background-color: black;
+         background-color: black;
         margin-bottom: 20px;
         
     }
@@ -28,20 +27,20 @@
 
     #container{
 /* border: 1px solid black; */
-height: 450px;
+height: 470px;
 width: 800px;
 
 margin: auto;
 
     }
 
-    .container5{
-        /* border: 1px solid black; */
+    /* .container5{
+        border: 1px solid black;
 height: 100px;
 width: 800px;
 
 margin: auto;
-    }
+    } */
 
 
 
@@ -68,13 +67,14 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
         /* border: 1px solid blue; */
         height: 75%;
         width: 45%;
-        margin-left: 25px;
+        margin-left: 5%;
     }
 
     #box4{
         display: flex; 
         width: 100%;
         height: 100%;
+        /* border: 1px solid blue; */
         
     }
 
@@ -89,7 +89,13 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
     margin: 4px 0 30px 0;
     padding-bottom: 17px;
     border-bottom: 1.5px solid #000000;
+    /* border: 1px solid black; */
    
+    }
+
+    .checkout {
+        padding-bottom: 10px;
+        border-bottom: 2px solid black;
     }
 
     
@@ -123,31 +129,8 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
         padding-left: 15px; 
         
     }
-
-    .checkout {
-        padding-bottom: 10px;
-        border-bottom: 2px solid black;
-    }
-
-    #password{
-        font-family: "BBText Bold",Helvetica,Arial,sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    text-indent: 0;
-    margin: 9px 0 30px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #000000;
-
     
-    }
-
-    .line{
-        
-        border-bottom: 2px solid black;
-    }
+    
     
 
 </style>
@@ -168,10 +151,11 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
             
             
         <div id="box2">
-<p id= "p1"> NEW CUSTOMER / GUEST</p>
+<p id= "p1"> ENTER SHIPPING ADDRESS </p>
 <hr>
 
-<input id="email" type="text" placeholder= "Email Address">
+<input id="shipping" type="text" placeholder= "Shipping Address">
+
 
 <p>  
     <i class="fas fa-external-link-square-alt"></i> Yes! I would like to receive the Bobbi Brown Email Newsletter.
@@ -186,16 +170,18 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
 
 
         <div id="box3">
-            <p id="p2">  SIGN IN</p>
+            <p id="p2">  Checkout details </p>
 
             <hr>
-            <input id= "email1" type="text" placeholder= "Email Address">
+            <input type="text" placeholder= "Enter Name">
 
-            <input id="password1" type="text" placeholder= "Password">
+            <input id="CCN" type="number" placeholder= "Enter Credit Card Number">
 
-            <p id="password"> FORGOT YOUR PASSWORD?</p>
+            <input id="CVV" type="number" placeholder= "Enter CVV number">
 
-            <button class= "button2"> SIGN IN </button>
+            <input id="expiry" type="number" placeholder= "Enter Expiry Year">
+
+            <button class= "button2"> PAY </button>
 
 
 
@@ -209,13 +195,6 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
 
     </div>
 
-    <div class="container5">
-
-        <p>By clicking “Continue with Facebook”, I agree to Bobbi Brown’s Terms and Conditions and Privacy Policy.</p>
-        <p> <i class="far fa-square"></i> Yes! I would like to receive the Bobbi Brown Email Newsletter.</p>
-        <div>
-
-            <div class="line">  </div>
     
 </body>
 
@@ -233,17 +212,15 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
     function finale(){
         
 
-        var a= document.querySelector("#email").value
+        var a= document.querySelector("#shipping").value
         
    
 
-        if(a=="mohaktripathi029@gmail.com")
+        if(a=="G-804 Ganesh Genesis")
         {
             window.location.href="otp.html"
         }
-        else{
-            alert("invalid email address");
-        }
+        
 
 
 
@@ -255,17 +232,17 @@ font-family: "BBText Bold",Helvetica,Arial,sans-serif;
     function finaletouch(){
         
 
-        var b= document.querySelector("#email1").value
-        var c= document.querySelector("#password1").value
-        
+        var b= document.querySelector("#CCN").value
+        var c= document.querySelector("#CVV").value
+        var d= document.querySelector("#expiry").value
    
 
-        if(b=="mohaktripathi029@gmail.com" && c=="mohak")
+        if(b=="123456789" && c=="321" && d=="2025")
         {
             window.location.href="otp.html"
         }
         else{
-            alert("invalid email address and password");
+            alert("invalid credit card details");
         }
 
 
