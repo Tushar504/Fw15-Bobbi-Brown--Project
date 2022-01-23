@@ -1,0 +1,147 @@
+
+
+
+
+
+
+
+
+#top{
+  width: 100%;
+}
+
+
+
+    #container{
+     
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px; 
+
+    }
+
+    #container > div{
+      width: 100%; 
+      height: 690px; 
+        /* border: 1px solid black;  */
+    }
+
+    #first{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    select{
+        padding: 10px;
+        margin: 5px 10px 10px 10px;
+    }
+
+    
+    div{
+        text-align: center;
+    }
+
+    #container1{
+      text-align: left;
+      margin-top: 15px;
+    }
+
+  
+
+    .imageclassic{
+    width: 100%;
+    }
+
+    .nameclassic, .subnameclassic, .priceclassic{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    
+    #flex1{
+
+      display: flex;
+      justify-content: space-between;
+      
+    }
+
+    .addcartclassic{
+       width: 27%;
+       height: 6%;
+       background-color: black;
+       color: white;
+       font-weight: bolder;
+       /* align-items: center; */
+       
+    }
+
+
+
+    #first{
+      display: flex;
+      justify-content: space-between;
+    }
+
+.filte, .totalproducts{
+  margin: 10px; 
+  
+}   
+
+    .topname{
+      color:  brown;
+      border: 1px solid brown ;
+      width: 30%;
+      margin: auto;
+    }
+
+    @media only screen and (min-width: 0px)  and (max-width: 320px)
+{
+
+  #img1{
+    width: 100%;
+  }
+#container{
+    grid-template-columns: repeat(1, 1fr) ;
+    grid-gap: 20px; 
+  
+}
+
+.addcartclassic{
+       width: 27%;
+       height: 8%;
+       background-color: black;
+       color: white;
+       font-weight: bolder;
+       /* align-items: center; */
+       
+    }
+} 
+
+
+@media only screen and (min-width: 321px)  and (max-width: 800px)
+{
+  #img1{
+    width:100% ;
+  }
+  #container{
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-gap: 20px; 
+    
+    }
+
+    .addcartclassic{
+       width: 27%;
+       height: 8%;
+       background-color: black;
+       color: white;
+       font-weight: bolder;
+       
+       
+    }
+ 
+
+
+}
+
+
