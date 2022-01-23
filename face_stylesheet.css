@@ -8,11 +8,13 @@
     grid-gap: 20px;
     padding: 10px;
     padding: 20px;
+     font-family: 'Roboto', sans-serif;
 }
 .asd{
     width:100%;
 }
 #container>div{
+     font-family: 'Roboto', sans-serif;
     align-items: center;
     text-align: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -24,6 +26,7 @@ button{
     border: 0px;
     padding: 10px;
     margin-bottom: 15px;
+     font-family: 'Roboto', sans-serif;
 }
 #first{
     display: flex;
