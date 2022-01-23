@@ -1,190 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link rel="stylesheet" href="cart_stylesheet.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cosmetics | Bobbi Brown Cosmetics</title>
+	<script src="https://kit.fontawesome.com/f49c08b0ef.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="stylesheet" type="text/css" href="sideBr.css">
+  	<link rel="stylesheet" href="cart_stylesheet.css">
+
+
 </head>
-
 <body>
-   <div id="outside">
-       <div id="inside1">
-           <img src="https://www.bobbibrowncosmetics.com/media/export/cms/offers/BB_Banner_Loyalty_728x90.jpg"/>
-            <p id="bag"></p>
-            <h5>Enjoy Free Standard Shipping on any $65+ order.</h5>
-            <button id="butt1">CONTINUE SHOPPING</button>
-            <button id="butt2"><span>Check out with</span> <i class="fab fa-cc-paypal"></i></button>
-            <button id="butt3">OR</button>
-            <button id="butt4">CHECKOUT</button>
-            <div class="head">
-               <div id="one">PRODUCT</div>
-               <div id="two">PRICE</div>
-             
-            </div>
-            <div id="container">
+	<!--  -->
+	<!--  -->
+	<!--  -->
 
-            </div>
-           
-        </div>
-       
-        <div id="inside2">
-           <p id="code">OFFER CODE</p>
-           <input type="text" placeholder="offer code" />
-           <p id="offer">One offer code per order</p>
-           <button id="bu">APPLY</button>
-           <hr>
-           <div id="first">
-           <div>SUBTOTAL</div>
-           <div id="pricepush"></div>
-        </div>
-           <div id="second">
-             <div>SHIPPING</div>
-             <div id="ship"></div>
+<div class="sideBr">
+	<div class="co_ham" onclick="cl_ham();">
+		<i class="fas fa-times"></i>
+		
+	</div>
+		<div class="sidData" id="sidData1">
+			<div class="text" onclick="show1();">
+				<h2>New</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210811_BB_FY21_LuxeDefiningLipstick_Engage_Product_ShadeRange_NA_GNAV_600x300.jpg">
 
-           </div>
-           <hr>
-           <div id="third">
-               <div>ESTIMATED TOTAL</div>
-               <div id="total"></div>
-           </div>
-           <h6>Afterpay cannot be used to purchase backordered, pre-ordered or auto-replenishment products, donations or gift cards </h6>
-        </div>
-   </div>
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>SHOP ALL NEW</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/Nagivation-Tiles-Skincare-Best-Sellers_@2x.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>OFFERS & SERVICES</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_ExtraSkincare_Relaunch_GNAV.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>SKINCARE FAVORITES</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+		<div class="sidData" id="sidData2">
+			<div class="text" onclick="show2();">
+				<h2>bestsellers</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-01-B_@2x.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>SHOP ALL BESTSELLERS</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-LWCSS_450x300_@2x.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>LONG-WEAR CREAM SHADOW STICK</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-Highlighters_450x300_@2x.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>HIGHLIGHTING POWDER</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+		<div class="sidData" id="sidData3">
+			<div class="text" onclick="show3();">
+				<a href="Face_Page.html">
+				<h2>Face</h2>
+			</a>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/face/Nagivation-Tiles-Face-PC-SLWW_2_@2x.jpg">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>DISCOVER SKIN LONG-WEAR WEIGHTLESS FOUNDATION SPF 15</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/face/Nagivation-Tiles-Face-Foundation-Finder_2_@2x.jpg">
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>FOUNDATION SHADE FINDER</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_2021_PC_GNAV_AfterpayUpfront.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>TRY NOW. PAY LATER.</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+		<div class="sidData" id="sidData4">
+			<div class="text" onclick="show4();">
+				<h2>makeup</h2>
+				<i class="fa fa-plus"></i>
+			</div>
+			<!--  -->
+		<div class="mainDetails">
+				
+			<div class="details">
+				<div class="sideImg">
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_PC_Ecomm_Mini_Bar_Gnav.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>MINI BAR</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E6XT08_600x600_0.jpg">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>SHEER FINISH PRESSED POWDER</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<div class="details">
+				<div class="sideImg">
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_Email_Virtual_Services_Q4_Virtual_Try-On_LWCSS_Animation.gif">
+
+				</div>
+				<!--  -->
+				<div class="deText">
+					<h2>HIGHLIGHTING POWDER</h2>
+				</div>
+				<div class="sideIcon">
+					<i class="fa fa-angle-right"></i>
+				</div>
+				<!--  -->
+			</div>
+			<!--  -->
+		</div> <!-- mainDetails div -->
+			<!--  -->
+	</div>
+<!--  -->
+</div>
+	<!--  -->
+	<!--  -->
+	<!--  -->
+	<!--  -->
+<div class="main">
+	<div class="ham" onclick="ham_bur()">
+		<i class="fas fa-bars"></i>
+	</div>
+		<div class="sign_div">
+		<span class="header-span">email sign up</span>
+			<div class="sign_div_hover">
+			<p class="sign_p_1">SIGN UP NOW</p>
+			<p class="sign_p_2">Sign up for emails and be the first to know about exclusive offers, pre-sales, new collections and more.</p>
+		<input class="sign_inp" type="email" placeholder="ENTER YOUR EMAIL">
+		<p class="sign_p">We love birthdays</p>
+		<p class="sign_p">Tell us your birthday and we'll send you a special surprise on your big day.</p>
+		<div class="sign_input">
+			<select>
+				<option>MONTH</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+		
+			<select>
+				<option>DAY</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</opti29>
+				<option>11</opti30>
+				<option>12</option>
+				<option>13</option>
+				<option>14</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+				<option>25</option>
+				<option>26</option>
+				<option>27</option>
+				<option>28</option>
+				<option>29</option>
+				<option>30</option>
+				<option>31</option>
+			</select>
+		</div>
+
+		<button class="sign_btn">Submit</button>
+	</div>
+	</div>
+	<div class="header-span-iner"></div>
+	<div>
+		<a href="home.html">
+		<img class="header-img" src="https://www.bobbibrowncosmetics.com/media/export/cms/logo.png">
+		</a>
+	</div>
+
+<div class="header-icon">
+		<span class="header-span">
+			JOIN BB<u>ACCESS</u>
+		</span>
+	<img src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Location-White.svg">
+				<div id="user_icon">
+					<div class="user_icon2">
+						<img src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/MyAccount-White.svg">
+					</div>
+			<div class="login_hover_main">
+				<div class="login_hover">
+					<p class="login_hover_p1">
+					Login
+					</p>
+						<input class="login_hover_input" type="email" name="" placeholder="Email">
+						<input class="login_hover_input" type="password" name="" placeholder="Password">
+						<p class="login_hover_p2">
+						Forgot Password?
+						</p>
+				<button class="login_hover_btn_1">LOG IN</button>
+				<hr>
+				<p>
+					By clicking "CONTINUE WITH FACEBOOK", I agree to the Bobbi Brown<u> Terms and Conditions</u> and <u> Privacy Policy.</u>
+				</p>
+				<input type="checkbox" name="">
+				Yes, sign me up to hear from Bobbi Brown! To learn more, view our <u>Privacy Policy.</u> If I am a California resident, I agree to the<u> Notice of Financial Incentive.</u>
+				</p>
+				<img class="login_hover_img" src="https://i.stack.imgur.com/oL5c2.png" alt="">
+		</div>
+				<div class="bottom_hover_div">
+					<p>Don't have an account?</p>
+					<button class="login_hover_btn_2">REGISTER</button>
+				</div>
+		</div>
+
+		</div>
+		<a href="cart_page.html">
+		<img src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Bag-White.svg">
+	</a>
+	</div>
+</div>
+
+<div class="main2">
+	<div class="main2_box">
+		<img src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Search-White.svg">
+		<input type="text" placeholder="search" name="">
+	</div>
+	<div class="header-span-list">
+			<span id="span1">
+					new
+					<div class="hoverdiv1">
+				<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210811_BB_FY21_LuxeDefiningLipstick_Engage_Product_ShadeRange_NA_GNAV_600x300.jpg">
+						<p>SHOP ALL NEW</p>
+				</div>
+					<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/Nagivation-Tiles-Skincare-Best-Sellers_@2x.jpg">
+						<p>OFFERS & SERVICES</p>
+				</div>
+					<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_ExtraSkincare_Relaunch_GNAV.jpg">
+						<p>SKINCARE FAVORITES</p>
+				</div>
+					<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20211104_BB_Lunar_New_Year_PC_NavigationTile_@2x_GNAV_Tile_KR_NA_UK_Collection.jpg">
+						<p>LUNAR NEW YEAR COLLECTION</p>
+			</div>	
+		</div>
+
+
+		</span>
+		<span id="span2">
+			bestsellers
+			<div class="hoverdiv2 hoverdiv1  ">
+					
+						<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-01-B_@2x.jpg">
+						<p>SHOP ALL BESTSELLERS</p>
+						</div>
+						<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-LWCSS_450x300_@2x.jpg">
+						<p>LONG-WEAR CREAM SHADOW STICK</p>
+						</div>
+						<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-Highlighters_450x300_@2x.jpg">
+						<p>HIGHLIGHTING POWDER</p>
+						</div>
+					<div>
+						<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-04-B_@2x.jpg">
+						<p>PALETTES & SETS</p>
+			</div>
+		</div>
+		</span>
+				<span id="span3">
+							<a href="Face_Page.html">
+						<span class="text_dec">face</span>
+					</a>
+						<div class="hoverdiv3 hoverdiv1 ">
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/face/Nagivation-Tiles-Face-PC-SLWW_2_@2x.jpg">
+							<p>DISCOVER SKIN LONG-WEAR WEIGHTLESS FOUNDATION SPF 15</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/face/Nagivation-Tiles-Face-Foundation-Finder_2_@2x.jpg">
+							<p>FOUNDATION SHADE FINDER</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_2021_PC_GNAV_AfterpayUpfront.jpg">
+							<p>TRY NOW. PAY LATER.</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/collections/Afterpay-Foundation/FH21_Afterpay_TakeAQuiz_pc.jpg">
+							<p>
+									Natural
+											Fresh, real-skin look</p>
+							</div>
+					</div>
+
+				</span>
+		<span id="span4">
+				makeup
+					<div class="hoverdiv4 hoverdiv1">
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_PC_Ecomm_Mini_Bar_Gnav.jpg">
+							<p>MINI BAR</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E6XT08_600x600_0.jpg">
+							<p>SHEER FINISH PRESSED POWDER</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/VirtualServices/BB_Email_Virtual_Services_Q4_Virtual_Try-On_LWCSS_Animation.gif">
+							<p>HIGHLIGHTING POWDER</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ELN701_600x600_0.jpg">
+							<p>EXTRA CLEANSING BALM</p>
+							</div>
+					</div>
+		</span>
+		<span id="span5">
+					<a href="skincare.html"><span>skincare</span></a>
+					<div class="hoverdiv5 hoverdiv1">
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/skincare/Nagivation-Tiles-Skincare-Best-Sellers_@2x.jpg">
+							<p>VITAMIN ENRICHED FACE BASE</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/skincare/BB-PC-GNAV-Skincare_Bestsellers_600x300_@2x.jpg">
+							<p>OUR BEST SELLERS</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E6M301_600x600_0.jpg">
+							<p>SOOTHING CLEANSING OIL</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_555259_600x600_0.jpg">
+							<p>PALETTES & SETS</p>
+							</div>
+					</div>
+
+			</span>
+		<span id="span6">
+					virtual services
+					<div class="hoverdiv6 hoverdiv1">
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_PC_GNAV_Virtual_Artistry_Consultations_Holiday_@2x.jpg">
+							<p>VIRTUAL CONSULTATIONS</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB-PC-GNAV-VTO_600x300_@2x.jpg">
+							<p>VIRTUAL TRY-ON</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/learn/Navigation-Tiles-Discover-Howtos_@2x.gif">
+							<p>HOW TO</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/BB_HOW_TO_LP_Hollie_Everyday_Eyes.jpg">
+							<p>Skincare Guide</p>
+							</div>
+					</div>
+
+				</span>
+		<span id="span7">
+				discover
+				<div class="hoverdiv7 hoverdiv1">
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_GNAV_Tout_04_LastChance.jpg">
+							<p>PRODUCT GUIDES</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/face/Nagivation-Tiles-Face-Foundation-Finder_2_@2x.jpg">
+							<p>FOUNDATION SHADE FINDER</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/39-Navigation-Dropdown-Tile-PC_Loyalty_2x.jpg">
+							<p>BBACCESS</p>
+							</div>
+							<div>
+							<img src="https://www.bobbibrowncosmetics.com/media/export/cms/foundation_finder/2021_fall/ECJJ28_Ivory_4000x4000_1.jpg">
+							<p>DO GOOD</p>
+							</div>
+					</div>
+
+			</span>
+	</div>
+	<div class="show">
+			<span>New</span>
+			<span>Lip</span>
+			<span>Face</span>
+		</div>
+</div>
+
+
+
+
+<!-- <div class="div_hover"></div> -->
+
+
+<!-- <-----------------------------------------start header herer ---------------------------------------------> 
+<div id="outside">
+		<div id="inside1">
+			 <img src="checkout.jpeg"/>
+			 <p id="bag"></p>
+			 <h5 id="he">Enjoy Free Standard Shipping on any $65+ order.</h5>
+			 <button id="butt1">CONTINUE SHOPPING</button>
+			 <button id="butt2"><span id="sp">Check out with</span> <i class="fab fa-cc-paypal"></i></button>
+			 <button id="butt3">OR</button>
+			 <a href="finalcheckout.html"><button id="butt4">CHECKOUT</button></a>
+			 <div class="head">
+				<div id="one">PRODUCT</div>
+				<div id="two">PRICE</div>
+			  
+			 </div>
+			 <div id="container">
+ 
+			 </div>
+			
+		 </div>
+		
+		 <div id="inside2">
+			<p id="code">OFFER CODE</p>
+			<input id="get" type="text" placeholder="offer code" />
+			<p id="offer">One offer code per order</p>
+			<button id="bu">APPLY</button>
+			<hr>
+			<div id="first">
+			<div>SUBTOTAL</div>
+			<div id="pricepush"></div>
+		 </div>
+			<div id="second">
+			  <div>SHIPPING</div>
+			  <div id="ship"></div>
+ 
+			</div>
+			<hr>
+			<div id="third">
+				<div>ESTIMATED TOTAL</div>
+				<div id="total"></div>
+			</div>
+			<h6>Afterpay cannot be used to purchase backordered, pre-ordered or auto-replenishment products, donations or gift cards </h6>
+		 </div>
+	</div>
+
+
+
+
+
+
+ 
+
+
+
+
+
+<!-- <-----------------------------------------start footer herer ---------------------------------------------> 
+<!--  -->
+	<div class="footer">
+		<!--  -->
+		<div class="box">
+			<div class="box2">
+				<h3>NEED HELP</h3>
+				<a href="#"><h4>Chat With A Artist</h4></a>
+				<a href="#"><p>Text An Artist</p></a>
+				<a href="#"><p>Call Us (877) 310-9222</p></a>
+				<a href="#"><p>Shipping & Return</p></a>
+				<a href="#"><p>FAQS</p></a>
+				<a href="#"><p>Careers</p></a>
+				<select>
+					<option value="Afganistan">Afghanistan</option>
+					   <option value="Albania">Albania</option>
+					   <option value="Algeria">Algeria</option>
+					   <option value="American Samoa">American Samoa</option>
+					   <option value="Andorra">Andorra</option>
+					   <option value="Angola">Angola</option>
+					   <option value="Anguilla">Anguilla</option>
+					   <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+					   <option value="Argentina">Argentina</option>
+					   <option value="Armenia">Armenia</option>
+					   <option value="Aruba">Aruba</option>
+					   <option value="Australia">Australia</option>
+					   <option value="Austria">Austria</option>
+					   <option value="Azerbaijan">Azerbaijan</option>
+					   <option value="Bahamas">Bahamas</option>
+					   <option value="Bahrain">Bahrain</option>
+					   <option value="Bangladesh">Bangladesh</option>
+					   <option value="Barbados">Barbados</option>
+					   <option value="Belarus">Belarus</option>
+					   <option value="Belgium">Belgium</option>
+					   <option value="Belize">Belize</option>
+					   <option value="Benin">Benin</option>
+					   <option value="Bermuda">Bermuda</option>
+					   <option value="Bhutan">Bhutan</option>
+					   <option value="Bolivia">Bolivia</option>
+					   <option value="Bonaire">Bonaire</option>
+					   <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+					   <option value="Botswana">Botswana</option>
+					   <option value="Brazil">Brazil</option>
+					   <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+					   <option value="Brunei">Brunei</option>
+					   <option value="Bulgaria">Bulgaria</option>
+					   <option value="Burkina Faso">Burkina Faso</option>
+					   <option value="Burundi">Burundi</option>
+					   <option value="Cambodia">Cambodia</option>
+					   <option value="Cameroon">Cameroon</option>
+					   <option value="Canada">Canada</option>
+					   <option value="Canary Islands">Canary Islands</option>
+					   <option value="Cape Verde">Cape Verde</option>
+					   <option value="Cayman Islands">Cayman Islands</option>
+					   <option value="Central African Republic">Central African Republic</option>
+					   <option value="Chad">Chad</option>
+					   <option value="Channel Islands">Channel Islands</option>
+					   <option value="Chile">Chile</option>
+					   <option value="China">China</option>
+					   <option value="Christmas Island">Christmas Island</option>
+					   <option value="Cocos Island">Cocos Island</option>
+					   <option value="Colombia">Colombia</option>
+					   <option value="Comoros">Comoros</option>
+					   <option value="Congo">Congo</option>
+					   <option value="Cook Islands">Cook Islands</option>
+					   <option value="Costa Rica">Costa Rica</option>
+					   <option value="Cote DIvoire">Cote DIvoire</option>
+					   <option value="Croatia">Croatia</option>
+					   <option value="Cuba">Cuba</option>
+					   <option value="Curaco">Curacao</option>
+					   <option value="Cyprus">Cyprus</option>
+					   <option value="Czech Republic">Czech Republic</option>
+					   <option value="Denmark">Denmark</option>
+					   <option value="Djibouti">Djibouti</option>
+					   <option value="Dominica">Dominica</option>
+					   <option value="Dominican Republic">Dominican Republic</option>
+					   <option value="East Timor">East Timor</option>
+					   <option value="Ecuador">Ecuador</option>
+					   <option value="Egypt">Egypt</option>
+					   <option value="El Salvador">El Salvador</option>
+					   <option value="Equatorial Guinea">Equatorial Guinea</option>
+					   <option value="Eritrea">Eritrea</option>
+					   <option value="Estonia">Estonia</option>
+					   <option value="Ethiopia">Ethiopia</option>
+					   <option value="Falkland Islands">Falkland Islands</option>
+					   <option value="Faroe Islands">Faroe Islands</option>
+					   <option value="Fiji">Fiji</option>
+					   <option value="Finland">Finland</option>
+					   <option value="France">France</option>
+					   <option value="French Guiana">French Guiana</option>
+					   <option value="French Polynesia">French Polynesia</option>
+					   <option value="French Southern Ter">French Southern Ter</option>
+					   <option value="Gabon">Gabon</option>
+					   <option value="Gambia">Gambia</option>
+					   <option value="Georgia">Georgia</option>
+					   <option value="Germany">Germany</option>
+					   <option value="Ghana">Ghana</option>
+				</select>
+			</div>
+			<div class="box2">
+				<a href="#"><h3>MY BOBBI BROWN</h3></a>
+				<a href="#"><p>BB Asses</p></a>
+				<a href="#"><p>My Account</p></a>
+				<a href="#"><p>My Order</p></a>
+				<a href="#"><p>Stor Locator</p></a>
+			</div>
+			<div class="box2">
+				<form>
+					<div class="inputBx">
+						<input class="email" type="text" placeholder="ENTER YOUR EMAIL" required="">
+						<br>
+						<br>
+						<div class="label">
+							<label>By entering my email and clicking "Sign Up", I agree to hear from Bobbi Brown, and If I am a California resident, I agree to the Notice of Financial Incentive. To learn more, view our 	Privacy Policy.</label>
+						</div>
+					</div>
+					<!--  -->
+					<div class="inputBx">
+						<input type="text" placeholder="ENTER YOUR MOBILE PHONE" required="" value="">
+						<br>
+						<br>
+						<div class="label" id="label2">
+							<input id="check" type="checkbox" required="">
+							<label for="check">I’d like to receive recurring advertising text messages (SMS and MMS) from Bobbi Brown. I understand these text messages may be sent via an autodialer, that consent is not required to purchase goods from Bobbi Brown, and that I can opt-out any time by replying STOP to the text message I receive from Bobbi Brown. I can text HELP for more information. Msg and	data rates may apply. If I am a California resident, I agree to the Notice of Financial Incentive. To learn more, view our Privacy Policy.</label>
+						</div>
+					<!--  -->
+					</div>
+					<!--  -->
+					<div class="inputBx">
+						<input type="submit" value="SUBMIT">
+					</div>
+					<!--  -->
+					<div class="inputBx">
+						<h3>FOLLOW US</h3>
+					</div>
+					<div class="inputBx">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div>
+				</form>
+			</div>
+		<!--  -->
+		</div>
+		<div class="bottombx">
+
+			<div class="text" onclick="chat();">
+				<a >Chat <i class="fas fa-comment-alt"></i></i></a>
+			</div>
+			<div class="text">
+				<p>© Bobbi Brown Professional Cosmetics, Inc. All worldwide rights reserved.</p>
+			</div>
+			<div class="text">
+				<p>Terms & Conditions</p>
+				<p>California Do Not Sell My Personal Information</p>
+				<p>Accessibility</p>
+			</div>
+			<div class="text">
+				<p>Interest Based Ads</p>
+				<p>Privacy Policy</p>
+			</div>
+			<div class="text">
+				<a href="#"><i class="fas fa-arrow-up"></i></a>
+			</div>
+		<!--  -->
+	</div>
+<!--  -->
+<div class="chatBx">
+	<div class="chatHead">
+		<h3>Message Us</h3>
+		<a onclick="chat();"><i class="fa fa-minus"></i></a>
+		<a  onclick="chat();"><i class="fa fa-close"></i></a>
+	</div>
+	<!--  -->
+	<div class="chatBody">
+		
+	</div>
+	<!--  -->
+	<div class="chatInput">
+		<i class="fas fa-plus"></i>
+		<input type="text" placeholder="Type Your Message">
+	</div>
+</div>
 </body>
-</html>
-<script>
-    
-    var dataforcart=JSON.parse(localStorage.getItem("cartdata"))||[];
-    mapping(dataforcart);
-    subtotal(dataforcart)
-    document.querySelector("#bag").textContent=`SHOPPING BAG  (${dataforcart.length})`
-  
-    if(dataforcart.length==0){
-       document.querySelector(".head").innerHTML="";
-    }
-  
-  
-    function mapping(dataforcart){
-    dataforcart.map(function(elem,index){
-     
-        var divmain=document.createElement("div");
-        divmain.setAttribute("id","prod")
-         
-        var div1=document.createElement("div");
-         div1.setAttribute("id","map")
-        var imgdiv=document.createElement("div");
-
-        var img=document.createElement("img");
-        img.setAttribute("src",elem.cartimg);
-
-        imgdiv.append(img);
-
-       var textdiv=document.createElement("p");
-       
-       textdiv.textContent=elem.product_name
-       
-       div1.append(imgdiv,textdiv);
-
-    var div2=document.createElement("div");
-    div2.setAttribute("id","sec")
-    div2.textContent=`$ ${elem.price}.00`
-     
-    var div3=document.createElement("span");
-    div3.textContent="";
-    div3.setAttribute("id","butt");
-    div3.setAttribute("class","fas fa-trash-alt")
-    div3.addEventListener("click",function(){
-        removefromcart(index);
-    })
-   
-    divmain.append(div1,div2,div3);
-
-    document.querySelector("#container").append(divmain)
- })
-   }
 
 
-//    function for remove Button
+<script type="text/javascript">
+	function chat(){
+		var chatBx = document.querySelector(".chatBx");
+		chatBx.classList.toggle("active");
+	}
+	function ham_bur(){
+		var sideBr = document.querySelector(".sideBr");
+		sideBr.classList.toggle("sactive");
+	}
+	function cl_ham(){
+		var sideBr = document.querySelector(".sideBr");
+		sideBr.classList.remove("sactive");
+	}
 
-   function removefromcart(index){
-    document.querySelector("#container").innerHTML="";
-    dataforcart.splice(index,1)
-    localStorage.setItem("cartdata",JSON.stringify(dataforcart))
-   mapping(dataforcart)
-   document.querySelector("#bag").textContent=`SHOPPING BAG  (${dataforcart.length})`
-   subtotal(dataforcart)
-   if(dataforcart.length==0){
-       document.querySelector(".head").innerHTML="";
-    }
-   }
-
-//    function for subtotal
-
-function subtotal(dataforcart){
- var res=dataforcart.reduce(function(sum,elem){
-     return sum+elem.price;
- },0)
- 
- 
- if(res>65){
- document.querySelector("#pricepush").textContent=`$ ${res}`;
- document.querySelector("#ship").textContent=`FREE`;
- document.querySelector("#ship").style.color="purple";
- document.querySelector("#ship").style.fontWeight="bold"
- document.querySelector("#total").textContent=`$ ${res}`;
- }
- else{
-    document.querySelector("#pricepush").textContent=`$ ${res}`;
-    if(dataforcart.length>0){
-     document.querySelector("#ship").textContent=`$ ${15}`;
-     var select=15;
-   }
-   else{
-    document.querySelector("#ship").textContent=`$ ${0}`;
-    var select=0
-   }
-   document.querySelector("#total").textContent=`$ ${res+select}`;
- }
-
-}
-
-
-
-// Function for Apply Button
-
-document.querySelector("#bu").addEventListener("click",discount)
-function discount(){
-    var code=document.querySelector("input").value
-    if(code=="masai20"){
-     var res=dataforcart.reduce(function(sum,elem){
-     return sum+elem.price;
- },0)
- if(res>65){
- document.querySelector("#pricepush").textContent=`$ ${res-((res*20)/100)}`;
- document.querySelector("#ship").textContent=`FREE`;
- document.querySelector("#ship").style.color="purple";
- document.querySelector("#ship").style.fontWeight="bold"
- document.querySelector("#total").textContent=`$ ${res-((res*20)/100)}`;
- }
- else{
-    document.querySelector("#pricepush").textContent=`$ ${res-((res*20)/100)}`;
-    if(dataforcart.length>0){
-     document.querySelector("#ship").textContent=`$ ${15}`;
-     var select=15;
-   }
-   else{
-    document.querySelector("#ship").textContent=`$ ${0}`;
-    var select=0
-   }
-   document.querySelector("#total").textContent=`$ ${(res-((res*20)/100))+select}`;
-
-}
- alert("masai20 offer code applied")
- 
- document.querySelector("input").value="";
-}
-}
 </script>
+<script type="text/javascript" src="sideBr.js"></script>
+<script type="text/javascript" src="cart_page.js"></script>
+</html

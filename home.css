@@ -2,6 +2,13 @@ body{
 			margin: 0;
 			padding: 0;
 		}
+
+		a{
+			text-decoration: none;
+		}
+
+	
+
 		.main{
 			width: 100%;
 			margin: auto;
@@ -590,7 +597,7 @@ body{
 			visibility: visible;
 		}
 		#user_icon img{
-			margin-top: -10px;
+			margin-top: -2px;
 		}
 
 		.login_hover_main:before{

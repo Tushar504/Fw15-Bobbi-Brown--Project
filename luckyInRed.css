@@ -3,7 +3,7 @@
     margin: 0;
     
 }
-#mim_2{
+#mim2{
     background-color: #5e1e20;
     color: white;
     width: 100%;
@@ -14,24 +14,24 @@
     padding: 45px 0px;
     
 }
-.left{
+.left2{
     width: 50%;
 }
 
-.title{
+.title2{
     width: 100%;
     box-sizing: border-box;
     margin: 100px 90px;
     margin-bottom: 40px;
 }
-.title p:nth-child(1){
+.title2 p:nth-child(1){
     font-family: "BBText Regular",Helvetica,Arial,sans-serif;
     line-height: 19px;
     font-size: 14px;
     width: 70%;
     letter-spacing: 1px;
 }
-.title p:nth-child(2){
+.title2 p:nth-child(2){
     font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
     font-size: 40px;
     letter-spacing: normal;
@@ -44,13 +44,13 @@
     
     
 }
-.title p:nth-child(3){
+.title2 p:nth-child(3){
     font-family: "BBText Regular",Helvetica,Arial,sans-serif;
     line-height: 19px;
     font-size: 14px;
     width: 70%;
 }
-.shopnow{
+.shopnow2{
     margin-top: 25px;
     background-color: white;
     color: black;
@@ -62,12 +62,12 @@
 
 
 
-.right{
+.right2{
     width: 50%;
     box-sizing: border-box;
     padding-left: 55px;
 }
-.right img{
+.right2 img{
     height: 430px;
     object-fit: contain
     
@@ -78,7 +78,7 @@
 /* ---------------------------MEDIA QUERY--------------------------- */
 
 @media (max-width:768px) {
-    #mim{
+    #mim2{
         background-color: #5e1e20;
         width: 100%;
         height: auto;
@@ -89,14 +89,14 @@
         padding: 45px 0px;
         
     }
-    #mim .left{
+    #mim2 .left2{
         width: 100%;
         box-sizing: border-box;
         text-align: center;
         padding: 30px 20px 0px 20px;
     }
     
-    #mim .title{
+    #mim2 .title2{
         width: 100%;
         box-sizing: border-box;
         margin: auto;
@@ -104,7 +104,7 @@
         text-align: center;
     }
 
-    .title p:nth-child(1){
+    .title2 p:nth-child(1){
         font-family: "BBText Regular",Helvetica,Arial,sans-serif;
         line-height: 1;
         font-size: 14px;
@@ -114,7 +114,7 @@
     
     }
 
-    #mim .title p:nth-child(2){
+    #mim2 .title2 p:nth-child(2){
         font-family: "BBSans Regular",Helvetica,Arial,sans-serif;
         font-size: 40px;
         letter-spacing: normal;
@@ -134,7 +134,7 @@
         width: 60%;
         margin: auto;
     }
-    #mim .shopnow{
+    #mim2 .shopnow2{
         background-color: white;
         color: black;
         border: 0;
@@ -146,13 +146,13 @@
     
     
     
-    #mim .right{
+    #mim2 .right2{
         width: 100%;
         box-sizing: border-box;
         justify-content: center;
         padding-left: 0;
     }
-    #mim .right img{
+    #mim2 .right2 img{
         width: 610px;
         height: 430px;
         margin: auto;
@@ -164,20 +164,20 @@
 /* ------------------------------for small screen--------------------------------- */
 
 @media (max-width:425px) {
-    #mim .right{
+    #mim2 .right2{
         width: 100%;
         box-sizing: border-box;
         justify-content: center;
         padding-left: 0;
     }
-    #mim .right img{
+    #mim2 .right2 img{
         width: 310px;
         height: 290px;
         margin: auto;
         display: block;
         
     }
-    #mim .title p:nth-child(3){
+    #mim2 .title2 p:nth-child(3){
         font-family: "BBText Regular",Helvetica,Arial,sans-serif;
         line-height: 1.5;
         font-size: 14px;
