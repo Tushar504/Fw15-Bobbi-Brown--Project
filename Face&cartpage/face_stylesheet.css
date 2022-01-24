@@ -8,11 +8,19 @@
     grid-gap: 20px;
     padding: 10px;
     padding: 20px;
+<<<<<<< Updated upstream
+=======
+     font-family: 'Roboto', sans-serif;
+>>>>>>> Stashed changes
 }
 .asd{
     width:100%;
 }
 #container>div{
+<<<<<<< Updated upstream
+=======
+     font-family: 'Roboto', sans-serif;
+>>>>>>> Stashed changes
     align-items: center;
     text-align: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -24,6 +32,10 @@ button{
     border: 0px;
     padding: 10px;
     margin-bottom: 15px;
+<<<<<<< Updated upstream
+=======
+     font-family: 'Roboto', sans-serif;
+>>>>>>> Stashed changes
 }
 #first{
     display: flex;
@@ -50,4 +62,8 @@ select{
         margin: 5px 10px 10px 10px;
         width: 50%;
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
