@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link rel="stylesheet" href="face_stylesheet.css">
+</head>
+
+  
+<body>
+    <div id="top">
+   <img src="top.png"/>
+    </div>
+    <div id="first">
+        <p class="filte" style="margin: 10px;">Home</p>
+        <p style="margin: 10px;" class="totalproducts"></p>
+    </div>
+    <div id="second">
+   <select id="filt" onchange="filter()">
+        <option value="">FILTER</option>
+        <option value="Foundation">Foundation</option>
+         <option value="Corrector & Concealer">Corrector & Concealer</option>
+         <option value="Primer">Primer</option>
+        <option value="Powder">Powder</option>
+        <option value="All">All</option>
+    
+   </select>
+   <select id="sor" onchange="sorted()">
+    <option value="">SORT BY</option>
+    <option value="Low">Price(Low To High)</option>
+     <option value="High">Price(High To Low)</option>
+   </select>
+</div>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+     var data=JSON.parse(localStorage.getItem("facedata"))||[];
+      mapping(data);
+      var data1=data;
+
+    //   storing cart items
+      var cartarr=JSON.parse(localStorage.getItem("cartdata"))||[]; 
+   
+     
+    //  map function
+      function mapping(data){
+     document.querySelector("#container").innerHTML="";
+    data.map(function(elem){
+        var div=document.createElement("div");
+      
+        var img=document.createElement("img");
+        img.setAttribute("src",elem.image);
+       
+        var h4=document.createElement("h4");
+        h4.textContent=elem.name;
+
+        var h2=document.createElement("h2");
+        h2.textContent=elem.product_name;
+
+        var h=document.createElement("p");
+        h.textContent=elem.specification;
+
+        var h3=document.createElement("p");
+        h3.textContent=`$ ${elem.price}.00`
+
+        var button=document.createElement("button");
+        button.textContent="ADD TO BAG"
+        button.addEventListener("click",function(){
+            addtocart(elem);
+        })
+
+        div.append(img,h4,h2,h,h3,button)
+        document.querySelector("#container").append(div)
+    })
+}
+
+// display product count
+document.querySelector(".totalproducts").textContent=`${data.length} products`
+
+
+// filter function
+function filter(){
+    var selected=document.querySelector("#filt").value;
+    if(selected=="All"){
+        document.querySelector("#top>img").setAttribute("src","top.png")
+        document.querySelector(".totalproducts").textContent=`${data.length} products`
+        mapping(data);
+        data1=data
+        document.querySelector("#sor").value="";
+    }
+    else{
+    var res=data.filter(function(elem){
+        return elem.category==selected;
+    })
+    document.querySelector(".totalproducts").textContent=`${res.length} products`
+    document.querySelector(".filte").textContent=`Home/Face`
+if(selected=="Foundation"){
+    document.querySelector("#top>img").setAttribute("src","foundation.png")
+    mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
+}
+else if(selected=="Corrector & Concealer"){
+    document.querySelector("#top>img").setAttribute("src","Corrector.png")
+    mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
+}
+else if(selected=="Primer"){
+    document.querySelector("#top>img").setAttribute("src","primer.png")
+    mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
+}
+else if(selected=="Powder"){
+    document.querySelector("#top>img").setAttribute("src","powder.png")
+    mapping(res);
+    data1=res
+    document.querySelector("#sor").value="";
+}
+}
+}
+
+// sort Function
+function sorted(){
+    var selected=document.querySelector("#sor").value;
+    var res=data1.sort(function(a,b){
+        if(selected=="Low"){
+            return a.price-b.price;
+        }
+        else if (selected=="High"){
+           return b.price-a.price;
+        }
+    })
+    mapping(res);
+}
+
+// function for add item to cart
+function addtocart(elem){
+    
+    cartarr.push(elem);
+    console.log(cartarr)
+    localStorage.setItem("cartdata",JSON.stringify(cartarr))
+    alert("item added to bag")
+}
+</script>

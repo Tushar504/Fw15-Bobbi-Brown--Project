@@ -1,8 +1,7 @@
 #outside{
     width: 70% ;
     margin: auto;
-   margin-top: 20px;
-   margin-bottom: 20px;
+   
     display: flex;
 }
 #inside1{
@@ -12,7 +11,7 @@
 #inside1>img{
     width: 100%;
 }
-#he{
+h5{
     border-top: 2px solid black;
     padding: 15px;
     background-color: rgb(213, 220, 231);
@@ -42,7 +41,7 @@
   padding: 5px;
   margin: 10px;
 }
-#sp{
+span{
   font-size: 10px;
   font-weight: bold;
 }
@@ -90,7 +89,7 @@ text-align: center;
 font-size: 15px;
 }
 
-#bag,#code,#offer>p{
+p{
 font-size: 12px;
 margin-left: 10px;
 }
@@ -111,7 +110,7 @@ font-size: 25px;
 padding: 5px;
 border-bottom: 2px solid black;
 }
-#get{
+input{
 width: 92%;
 height: 30px;
 margin-left: 10px;
