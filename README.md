@@ -3,7 +3,7 @@
 
 
 
-> go to your browser and type `http://localhost:5500/home.html` and you are ready to run and explore our project.
+> click on index.html file and then you are ready to run and explore our project.
 
 ---
 
